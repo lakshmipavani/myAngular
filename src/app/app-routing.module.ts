@@ -6,7 +6,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { ListviewComponent } from './listview/listview.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
-//import { PopupComponent } from './popup/popup.component';
+import { PopupComponent } from './popup/popup.component';
 
   // Route config let's you map routes to components
   const routes: Routes = [
@@ -39,6 +39,10 @@ import { CarouselComponent } from './carousel/carousel.component';
       },{
       path:'carousel',
       component: CarouselComponent
+      },
+      {
+      path:'popupView',
+      component: PopupComponent
       }
    ];
 

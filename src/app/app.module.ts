@@ -14,9 +14,16 @@ import { TasksComponent } from './tasks/tasks.component';
 import { ListviewComponent } from './listview/listview.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
-//import { PopupComponent } from './popup/popup.component';
+import { AnimationComponent } from './animation/animation.component';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,//new routing module
+    PopupModule.forRoot()
+  ],
   declarations: [
     AppComponent,
     PeopleListComponent,
@@ -24,13 +31,9 @@ import { CarouselComponent } from './carousel/carousel.component';
     TasksComponent,
     ListviewComponent,
     NavBarComponent,
-    CarouselComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    //PopupModule,
-    AppRoutingModule //new routing module
+    CarouselComponent,
+    AnimationComponent,
+    PopupComponent
   ],
   providers: [PeopleService],
   bootstrap: [AppComponent]
