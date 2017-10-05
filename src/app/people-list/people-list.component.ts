@@ -6,7 +6,6 @@ import { PeopleService } from '../people.service';
 @Component({
   selector: 'app-people-list',
   template: `
-    <p> people-list Works! </p>
     <ul>
        <li *ngFor="let person of people">
          <a href= "#" (click)="selectPerson(person)">
@@ -26,7 +25,7 @@ import { PeopleService } from '../people.service';
   </ul>
   
   `,
-  styleUrls: ['./people-list.component.css']
+  styleUrls: ['people-list.component.css']
 })
 export class PeopleListComponent implements OnInit {
     

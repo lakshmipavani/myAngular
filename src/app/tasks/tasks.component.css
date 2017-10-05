@@ -1,46 +1,50 @@
+.todos {
+  margin-top: 5%;
+}
+
 .box1 {
-    border: solid 1px #006699;
-    padding: 20px;
-    background: #f3f3f3;
-    border-radius: 5px;
-  }
+  border: solid 1px #006699;
+  padding: 20px;
+  background: #f3f3f3;
+  border-radius: 5px;
+}
 
-  .todos input.textfield {
-    width: 480px;
-    height: 36px;
-    margin-right: 20px;
-    font-size: 1.4em;
-    vertical-align: top;
-  }
+.todos input.textfield {
+  width: 480px;
+  height: 36px;
+  margin-right: 20px;
+  font-size: 1.4em;
+  vertical-align: top;
+}
 
-  .todos input.checkbox {
-    width: 20px;
-    height: 20px;
-  }
+.todos input.checkbox {
+  width: 20px;
+  height: 20px;
+}
 
-  .todos .checked {
-    text-decoration: line-through;
-  }
+.todos .checked {
+  text-decoration: line-through;
+}
 
-  .todos button {
-    height: 36px;
-    font-size: 1.1em;
-    vertical-align: top;
-    border: solid 1px #999;
-    border-radius: 2px;
-  }
+.todos button {
+  height: 36px;
+  font-size: 1.1em;
+  vertical-align: top;
+  border: solid 1px #999;
+  border-radius: 2px;
+}
 
-  .todos .delete-icon {
-    diplay: inline-block;
-    cursor: pointer;
-  }
+.todos .delete-icon {
+  diplay: inline-block;
+  cursor: pointer;
+}
 
-  #headline1 {
-    background-image: url(../../assets/deleteIcon.png);
-    background-repeat: no-repeat;
-    background-position: right top;
-    padding-top: 28px;
-    margin-top: -25px;
-    display: block;
-    background-size: 5%;
-   }
+#headline1 {
+  background-image: url(../../assets/deleteIcon.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding-top: 28px;
+  margin-top: -25px;
+  display: block;
+  background-size: 5%;
+}

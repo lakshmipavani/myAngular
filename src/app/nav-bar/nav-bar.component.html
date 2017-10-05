@@ -1,9 +1,10 @@
 <!-- core/navbar.component.html -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <ul  style="list-style-type: none;" class="nav navbar-nav">
-            <li style="float: left;margin-right: 16px;font-size: large;"><a style="text-decoration: none;" [routerLink]="['tasks']">Go To Tasks Page</a></li>
-            <li style="float: left;margin-right: 16px;font-size: large;"><a style="text-decoration: none;" [routerLink]="['listview']"> Go To list page</a></li>
-        </ul>
-    </div>
-</nav>
+  <div class="mainNav">
+    <ul>
+      <li ><a  [routerLink]="['tasks']">Todos</a></li>
+      <li ><a  [routerLink]="['listview']">ListView</a></li>
+      <li ><a  [routerLink]="['persons']">Persons</a></li>
+      <li ><a  [routerLink]="['carousel']">Carousel</a></li>
+      <li ><a  [routerLink]="['PopupView']">PopupView</a></li>
+    </ul>
+ </div>
