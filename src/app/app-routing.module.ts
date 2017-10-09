@@ -6,7 +6,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { ListviewComponent } from './listview/listview.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { PopupComponent } from './popup/popup.component';
+import { DatatableComponent } from './datatable/datatable.component';
 
   // Route config let's you map routes to components
   const routes: Routes = [
@@ -41,8 +41,8 @@ import { PopupComponent } from './popup/popup.component';
       component: CarouselComponent
       },
       {
-      path:'popupView',
-      component: PopupComponent
+      path:'DataTable',
+      component: DatatableComponent
       }
    ];
 

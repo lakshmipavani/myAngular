@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
-import { PopupModule } from 'ng2-opd-popup';
+
 
 import { AppComponent } from './app.component';
 import { PeopleListComponent } from './people-list/people-list.component';
@@ -15,14 +15,15 @@ import { ListviewComponent } from './listview/listview.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { AnimationComponent } from './animation/animation.component';
-import { PopupComponent } from './popup/popup.component';
+import { DatatableComponent } from './datatable/datatable.component';
+
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,//new routing module
-    PopupModule.forRoot()
+    AppRoutingModule//new routing module
+
   ],
   declarations: [
     AppComponent,
@@ -33,7 +34,7 @@ import { PopupComponent } from './popup/popup.component';
     NavBarComponent,
     CarouselComponent,
     AnimationComponent,
-    PopupComponent
+    DatatableComponent
   ],
   providers: [PeopleService],
   bootstrap: [AppComponent]
