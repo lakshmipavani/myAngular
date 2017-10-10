@@ -25,6 +25,7 @@
     "datatables.net": "^1.10.16",
     "jquery": "^3.2.1",
     "ng2-opd-popup": "^1.1.17",
+    "ngx-widget-grid": "^2.0.6",
     "requirejs": "^2.3.5",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"

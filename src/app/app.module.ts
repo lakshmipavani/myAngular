@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
+import { NgxWidgetGridModule } from '../../node_modules/ngx-widget-grid/dist';
 
 
 import { AppComponent } from './app.component';
@@ -16,12 +17,14 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { AnimationComponent } from './animation/animation.component';
 import { DatatableComponent } from './datatable/datatable.component';
+import { WidgetgridComponent } from './widgetgrid/widgetgrid.component';
 
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    NgxWidgetGridModule,
     AppRoutingModule//new routing module
 
   ],
@@ -34,7 +37,8 @@ import { DatatableComponent } from './datatable/datatable.component';
     NavBarComponent,
     CarouselComponent,
     AnimationComponent,
-    DatatableComponent
+    DatatableComponent,
+    WidgetgridComponent
   ],
   providers: [PeopleService],
   bootstrap: [AppComponent]

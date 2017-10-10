@@ -1,0 +1,13 @@
+<p>
+  widgetgrid works!
+</p>
+<ngx-widget-grid [rows]="4" [columns]="5" [highlightNextPosition]="false"
+                 [showGrid]="true" (widgetPositionChange)="onWidgetChange($event)">
+  <ngx-widget [(position)]="{top: 2,left: 2,height: 1,width: 1}"
+              [movable]="true" [resizable]="true">
+    <div style="height:100%;width:100%; display:flex;">
+      <div style="height:100%;width:100%; padding:10px; background-color: rgb(140, 198, 0);">
+      </div>
+    </div>
+  </ngx-widget>
+</ngx-widget-grid>
