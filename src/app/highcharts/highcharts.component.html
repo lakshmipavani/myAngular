@@ -1,0 +1,31 @@
+<p>
+  highcharts works!
+</p>
+<chart [options]="chart1"></chart>
+
+<chart [options]="chart2" (load)="saveInstance($event.context)"></chart>
+
+<chart [options]="chart3">
+<series (mouseOver)="onSeriesMouseOver($event)"> </series>
+</chart>
+<p><b>{{serieName}}</b> is hovered<p>
+
+<chart [options]="chart4">
+          <series>
+              <point (select)="onPointSelect($event)"></point>
+          </series>
+</chart>
+<p><b>{{point}}</b> is selected<p>
+
+
+<chart [options]="chart5" 
+             (selection)="onChartSelection($event)">  
+</chart>
+<p>selection from <b>{{from}}</b> to <b>{{to}}</b></p> 
+
+<chart [options]="chart6">
+          <xAxis (afterSetExtremes)="onAfterSetExtremesX($event)"></xAxis>
+          <yAxis (afterSetExtremes)="onAfterSetExtremesY($event)"></yAxis>
+      </chart>
+      <p>{{minX}} - {{maxX}}<p>
+      <p>{{minY}} - {{maxY}}<p>

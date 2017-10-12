@@ -7,7 +7,8 @@ import { ListviewComponent } from './listview/listview.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { DatatableComponent } from './datatable/datatable.component';
-import { WidgetgridComponent } from './widgetgrid/widgetgrid.component';
+import { HighchartsComponent } from './highcharts/highcharts.component';
+//import { WidgetgridComponent } from './widgetgrid/widgetgrid.component';
 
   // Route config let's you map routes to components
   const routes: Routes = [
@@ -46,8 +47,8 @@ import { WidgetgridComponent } from './widgetgrid/widgetgrid.component';
       component: DatatableComponent
       },
       {
-      path:'GridWidget',
-      component: WidgetgridComponent
+      path:'highcharts',
+      component: HighchartsComponent
       }
    ];
 
