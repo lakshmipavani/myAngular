@@ -8,7 +8,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { DatatableComponent } from './datatable/datatable.component';
 import { HighchartsComponent } from './highcharts/highcharts.component';
-//import { WidgetgridComponent } from './widgetgrid/widgetgrid.component';
+import { WidgetgridComponent } from './widgetgrid/widgetgrid.component';
+import { DragDropComponentComponent } from './drag-drop-component/drag-drop-component.component';
 
   // Route config let's you map routes to components
   const routes: Routes = [
@@ -49,6 +50,14 @@ import { HighchartsComponent } from './highcharts/highcharts.component';
       {
       path:'highcharts',
       component: HighchartsComponent
+      },
+      {
+      path:'movablegrid',
+      component: WidgetgridComponent
+      },
+      {
+      path:'dragDrop',
+      component: DragDropComponentComponent
       }
    ];
 

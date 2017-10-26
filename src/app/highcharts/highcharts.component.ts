@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { ChartModule } from 'angular2-highcharts'; 
+import { ChartModule } from 'angular2-highcharts';
 
 @Component({
   selector: 'app-highcharts',

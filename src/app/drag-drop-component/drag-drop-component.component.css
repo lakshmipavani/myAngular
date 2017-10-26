@@ -1,0 +1,18 @@
+.panel-body{
+ width:200px;
+ height:200px;
+ background-color: #AA5579;
+ padding:8px;
+ font-size: 10px;
+}
+
+.list-group{
+	width:200px;
+    height:200px;
+	background-color: #942A57;
+}
+.list-group2{
+	width:200px;
+    height:200px;
+	background-color: #6D364E;
+}

@@ -1,0 +1,48 @@
+  .image{
+    width:100%;
+    height:100%;
+  }
+  .login{    
+      display: block;
+      margin: 0px 200px;
+      width: 363px;
+      height: 40%;
+      margin-top: 5%;
+      background-color: #97cfe0;
+      padding: 20px 10px 10px 10px;
+      border-radius: 12px;
+      opacity: 0.9;
+    }
+   input{
+      border: 5px solid white;
+      height: 20%;
+      background: rgba(255,255,255,0.5);
+      margin: 0 0 10px 29px;
+      width: 85%;
+      border-radius: 5px;}
+      button{
+      height:20%;
+      background: #7ebbcc;
+      margin: 25px 0 10px 29px;
+      width:85%;
+      border-radius:5px;
+      color:white;
+      font-size:20px;
+    }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: pink;
+    font-size:20px;
+    margin-left:20px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: pink;
+    font-size:20px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: pink;
+    font-size:20px;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: pink;
+    font-size:20px;
+}
