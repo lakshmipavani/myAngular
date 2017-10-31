@@ -10,6 +10,7 @@ import { DatatableComponent } from './datatable/datatable.component';
 import { HighchartsComponent } from './highcharts/highcharts.component';
 import { WidgetgridComponent } from './widgetgrid/widgetgrid.component';
 import { DragDropComponentComponent } from './drag-drop-component/drag-drop-component.component';
+import { ConverterComponent } from './converter/converter.component';
 
   // Route config let's you map routes to components
   const routes: Routes = [
@@ -58,6 +59,10 @@ import { DragDropComponentComponent } from './drag-drop-component/drag-drop-comp
       {
       path:'dragDrop',
       component: DragDropComponentComponent
+      },
+      {
+      path:'converter',
+      component: ConverterComponent
       }
    ];
 

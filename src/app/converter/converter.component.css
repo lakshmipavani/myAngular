@@ -1,0 +1,34 @@
+.selectView{
+    height: 98%;
+    width: 44%;
+    /* background-color: orange; */
+    float: left;
+    border: 5px solid #F4A460;
+}
+.displayView{
+    height: 98%;
+    width: 44%;
+    /* background-color: green; */
+    float: left;
+    /* margin-top: 10px; */
+    border: 5px solid #F4A460;
+}
+.converterView{
+	height: 98%;
+    width: 10%;
+    margin: 0px;
+    border-top: 5px solid #F4A460;
+    /* background: black; */
+    float: left;
+}
+.selectViewBody{
+	height:90%;
+	width:70%;
+	margin-left:10%;
+	margin-top:5%;
+	border: 2px solid #F4A460;
+}
+ .converterBody{
+    margin-top: 144%;
+    margin-left: 28%;
+ }
