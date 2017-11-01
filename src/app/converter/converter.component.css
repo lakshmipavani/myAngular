@@ -1,6 +1,6 @@
 .selectView{
     height: 98%;
-    width: 44%;
+    width: 43%;
     /* background-color: orange; */
     float: left;
     border: 5px solid #F4A460;
@@ -27,8 +27,15 @@
 	margin-left:10%;
 	margin-top:5%;
 	border: 2px solid #F4A460;
+    float:left;
 }
  .converterBody{
     margin-top: 144%;
     margin-left: 28%;
+ }
+
+ .deleteTodo{
+    margin-top: 5%;
+    float: right;
+    margin-right: 26%;
  }

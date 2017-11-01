@@ -13,7 +13,8 @@ export class ConverterComponent implements OnInit {
 		  convert:number =0;
   constructor() {
      this.newTodo = '';
-     this.todos = [];
+     //this.todos = [];
+     this.todos = (JSON.parse(localStorage.getItem("todos")))?(JSON.parse(localStorage.getItem("todos"))):[];
    }
   addTodo(event) {
       this.todoObj = {
@@ -21,6 +22,7 @@ export class ConverterComponent implements OnInit {
         completed: false
       }
       this.todos.push(this.todoObj);
+      localStorage.setItem("todos", JSON.stringify(this.todos));
       this.newTodo = '';
       event.preventDefault();
   }
@@ -31,8 +33,25 @@ export class ConverterComponent implements OnInit {
 	    this.convert=1;
 	    event.preventDefault();
   }
- displayReverter(event){
+
+  displayReverter(event){
         this.convert=0;
-	    event.preventDefault();
- }
+  	    event.preventDefault();
+  }
+
+  statusChange(event){
+      if(event.target){
+         localStorage.setItem("todos", JSON.stringify(this.todos));
+      }
+  }
+
+  deleteSelectedTodos() {
+      //need ES5 to reverse loop in order to splice by index
+      for(var i=(this.todos.length -1); i > -1; i--) {
+        if(this.todos[i].completed) {
+          this.todos.splice(i, 1);
+        }
+      }
+      localStorage.setItem("todos", JSON.stringify(this.todos));
+    }
 }
