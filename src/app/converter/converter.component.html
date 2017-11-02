@@ -1,0 +1,39 @@
+<div style="height: 92%;width:100%;border:1px solid black;">
+
+	<div class="selectView">
+	           <form style ="margin-left: 2%;margin-top: 5%;float:left;" (submit)="addTodo($event)">
+                 <input [(ngModel)]="newTodo" (keyup.enter)="newTodo=''" class="textfield" name="newTodo">
+                 <button  type="submit" [disabled]="newTodo===''">Add Todo</button>
+               </form>
+
+               <div class="deleteTodo">
+                 <button (click)="deleteSelectedTodos()">Delete Selected</button>
+               </div>
+			    <div class="selectViewBody">
+				        <div *ngFor="let todo of todos; let i=index">
+				           <input type="checkbox" class="checkbox" (change)="statusChange($event)" [(ngModel)]="todo.completed" />
+				              <span [ngClass]="{'checked': todo.completed}">{{ todo.newTodo }}</span>
+				        </div>
+				</div>
+	</div><!-- end of select view -->
+
+	<div class="converterView">
+		  <div class="converterBody">
+	        <button (click)="displayConverted($event)">convert</button><br><br>
+	        <button (click)="displayReverter($event)">revert</button>
+		  </div>
+	</div><!-- end of converter view -->
+
+	<div class="displayView" >
+		        <div *ngIf="convert == 1">
+			      <ul>
+			         <div *ngFor="let todo of todos; let i=index">
+			           <div *ngIf="todo.completed">
+			                <li>{{todo.newTodo}}</li>
+			           </div>
+			         </div>
+			      </ul>
+			    </div>
+	</div><!-- end of display view -->
+</div>
+
