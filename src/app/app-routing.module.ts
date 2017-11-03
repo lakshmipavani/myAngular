@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { LoginviewComponent } from './loginview/loginview.component';
+
 import { PeopleListComponent } from './people-list/people-list.component';
 import { PersonDetailsComponent } from './person-details/person-details.component';
 import { TasksComponent } from './tasks/tasks.component';
@@ -26,8 +29,12 @@ import { ConverterComponent } from './converter/converter.component';
       // map '/' to '/persons' as our default route
       {
         path: '',
-        redirectTo: '/persons',
+        redirectTo: '/login',
         pathMatch: 'full'
+      },
+      {
+      path:'login',
+      component:LoginviewComponent
       },
       {
       path:'listview',

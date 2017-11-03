@@ -29,7 +29,7 @@ export class LoginviewComponent implements OnInit {
      // this._router.navigate(['admin']);
   // }
   // else{
-      this._router.navigate(['user']);
+      this._router.navigate(['/nav-bar']);
   //  }    
   }
   ngOnInit() {
