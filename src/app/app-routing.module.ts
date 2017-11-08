@@ -14,65 +14,61 @@ import { HighchartsComponent } from './highcharts/highcharts.component';
 import { WidgetgridComponent } from './widgetgrid/widgetgrid.component';
 import { DragDropComponentComponent } from './drag-drop-component/drag-drop-component.component';
 import { ConverterComponent } from './converter/converter.component';
+import { NotificationPanelComponent } from './notification-panel/notification-panel.component';
+
+import { LoginLayoutComponentComponent } from './login-layout-component/login-layout-component.component';
+import { DashboardLayoutComponentComponent } from './dashboard-layout-component/dashboard-layout-component.component';
+
 
   // Route config let's you map routes to components
   const routes: Routes = [
-      // map '/persons' to the people list component
-      {
-        path: 'persons',
-        component: PeopleListComponent
+         {
+          path: '',
+          component: LoginLayoutComponentComponent,
+          children: [
+            {
+            path:'login',component:LoginviewComponent
+            }
+          ]
       },
       {
-        path: 'persons/:id',
-        component: PersonDetailsComponent
-      },
-      // map '/' to '/persons' as our default route
-      {
-        path: '',
-        redirectTo: '/login',
-        pathMatch: 'full'
-      },
-      {
-      path:'login',
-      component:LoginviewComponent
-      },
-      {
-      path:'listview',
-      component:ListviewComponent
-      },
-      {
-      path:'tasks',
-      component: TasksComponent
-      },
-      {
-      path:'nav-bar',
-      component: NavBarComponent
-      },{
-      path:'carousel',
-      component: CarouselComponent
-      },
-      {
-      path:'DataTable',
-      component: DatatableComponent
-      },
-      {
-      path:'highcharts',
-      component: HighchartsComponent
-      },
-      {
-      path:'movablegrid',
-      component: WidgetgridComponent
-      },
-      {
-      path:'dragDrop',
-      component: DragDropComponentComponent
-      },
-      {
-      path:'converter',
-      component: ConverterComponent
+        path: 'dashboard',
+        component: DashboardLayoutComponentComponent,
+        children: [
+          {
+          path:'listview',component:ListviewComponent
+          },
+          {
+          path:'tasks',component: TasksComponent
+          },
+          {
+          path:'nav-bar',component: NavBarComponent
+          },
+          {
+          path:'carousel',component: CarouselComponent
+          },
+          {
+          path:'DataTable',component: DatatableComponent
+          },
+          {
+          path:'highcharts',component: HighchartsComponent
+          },
+          {
+          path:'movablegrid',component: WidgetgridComponent
+          },
+          {
+          path:'dragDrop',component: DragDropComponentComponent
+          },
+          {
+          path:'converter',component: ConverterComponent
+          },
+          {
+          path: 'persons',component: PeopleListComponent
+          }
+        ]
       }
    ];
-
+  
 //export const appRouterModule = RouterModule.forRoot(routes);
 
 // HERE: New module

@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { ChartModule } from 'angular2-highcharts';
@@ -28,11 +29,15 @@ import { DragDropComponentComponent } from './drag-drop-component/drag-drop-comp
 import { ConverterComponent } from './converter/converter.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { LoginLayoutComponentComponent } from './login-layout-component/login-layout-component.component';
+import { DashboardLayoutComponentComponent } from './dashboard-layout-component/dashboard-layout-component.component';
+import { NotificationPanelComponent } from './notification-panel/notification-panel.component';
 
 
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     NgxWidgetGridModule,
     ChartModule.forRoot(require('highcharts')),
@@ -56,7 +61,10 @@ import { HeaderComponent } from './header/header.component';
     DragDropComponentComponent,
     ConverterComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginLayoutComponentComponent,
+    DashboardLayoutComponentComponent,
+    NotificationPanelComponent
   ],
   providers: [PeopleService],
   bootstrap: [AppComponent]
