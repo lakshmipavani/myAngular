@@ -14,21 +14,21 @@
 }
 
 #wrapper._opened .sidebar-wrapper{
-	width:200px;
+	width:60px;
 }
 .sidebar-wrapper.opened{
-	width:200px;
+	width:60px;
 }
 .sidebar-wrapper.closed{
 	width:0 !important;
 }
 
 #wrapper._opened .page-content-wrapper{
-	padding-left:200px;
+	padding-left:60px;
 }
 
 .page-content-wrapper.opened{
-	padding-left:200px;
+	padding-left:60px;
 }
 .page-content-wrapper.closed{
 	padding-left:none;
@@ -50,7 +50,7 @@
 }
 
 .contextView.opened{
-	padding-left:250px !important;
+	padding-left:60px !important;
 	padding-top:1px !important;
 }
 .contextView.closed{

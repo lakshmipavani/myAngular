@@ -6,9 +6,16 @@ import { Component } from '@angular/core';
       <!-- side-bar content -->
           <div class="sidebar-wrapper"  [ngClass]="{'opened':_opened,'closed':!_opened}">
                  <ul class="sidebar-nav">
-                    <li ><a  [routerLink]="['DataTable']"><img src="assets/a1.jpg" height="50px" width="50px"></a></li>
-                    <li ><a  [routerLink]="['highcharts']">HighCharts</a></li>
-                    <li ><a  [routerLink]="['movablegrid']">Gri dControls</a></li>
+                    <li ><a  [routerLink]="['tasks']"><img src="assets/draggable.jpg" height="30px" width="30px"></a></li>
+                    <li ><a  [routerLink]="['listview']"><img src="assets/draggable.jpg" height="30px" width="30px"></a></li>
+                    <li ><a  [routerLink]="['persons']"><img src="assets/draggable.jpg" height="30px" width="30px"></a></li>
+                    <li ><a  [routerLink]="['carousel']"><img src="assets/draggable.jpg" height="30px" width="30px"></a></li>
+                    <li ><a  [routerLink]="['DataTable']"><img src="assets/datatable.jpg" height="30px" width="30px"></a></li>
+                    <li ><a  [routerLink]="['highcharts']"><img src="assets/highchart.jpg" height="30px" width="30px"></a></a></li>
+                    <li ><a  [routerLink]="['movablegrid']"><img src="assets/draggable.jpg" height="30px" width="30px"></a></li>
+                    <li ><a  [routerLink]="['dragDrop']"><img src="assets/draggable.jpg" height="30px" width="30px"></a></li>
+                    <li ><a  [routerLink]="['converter']"><img src="assets/draggable.jpg" height="30px" width="30px"></a></li>
+                    <li ><a  [routerLink]="['sidebar']"><img src="assets/draggable.jpg" height="30px" width="30px"></a></li>
                  </ul>
           </div>
       
