@@ -31,7 +31,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginLayoutComponentComponent } from './login-layout-component/login-layout-component.component';
 import { DashboardLayoutComponentComponent } from './dashboard-layout-component/dashboard-layout-component.component';
-import { NotificationPanelComponent } from './notification-panel/notification-panel.component';
+
+import { SideBarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
@@ -43,7 +44,6 @@ import { NotificationPanelComponent } from './notification-panel/notification-pa
     ChartModule.forRoot(require('highcharts')),
     Ng2DragDropModule.forRoot(),
     AppRoutingModule//new routing module
-
   ],
   declarations: [
     AppComponent,
@@ -64,7 +64,7 @@ import { NotificationPanelComponent } from './notification-panel/notification-pa
     HeaderComponent,
     LoginLayoutComponentComponent,
     DashboardLayoutComponentComponent,
-    NotificationPanelComponent
+    SideBarComponent
   ],
   providers: [PeopleService],
   bootstrap: [AppComponent]
