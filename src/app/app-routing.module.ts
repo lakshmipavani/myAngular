@@ -70,14 +70,35 @@ import { DashboardLayoutComponentComponent } from './dashboard-layout-component/
           component: SideBarComponent,
           children:[
             {
-             path:'DataTable',component: DatatableComponent
-            },
-            {
-            path:'highcharts',component: HighchartsComponent
-            },
-            {
-            path:'movablegrid',component: WidgetgridComponent
-            }
+          path:'listview',component:ListviewComponent
+          },
+          {
+          path:'tasks',component: TasksComponent
+          },
+          {
+          path:'nav-bar',component: NavBarComponent
+          },
+          {
+          path:'carousel',component: CarouselComponent
+          },
+          {
+          path:'DataTable',component: DatatableComponent
+          },
+          {
+          path:'highcharts',component: HighchartsComponent
+          },
+          {
+          path:'movablegrid',component: WidgetgridComponent
+          },
+          {
+          path:'dragDrop',component: DragDropComponentComponent
+          },
+          {
+          path:'converter',component: ConverterComponent
+          },
+          {
+          path: 'persons',component: PeopleListComponent
+          }
            ]
           }
         ]
