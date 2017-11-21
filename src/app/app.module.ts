@@ -22,7 +22,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { AnimationComponent } from './animation/animation.component';
 import { DatatableComponent } from './datatable/datatable.component';
-import { HighchartsComponent } from './highcharts/highcharts.component';
+//import { HighchartsComponent } from './highcharts/highcharts.component';
 import { LoginviewComponent } from './loginview/loginview.component';
 import { WidgetgridComponent } from './widgetgrid/widgetgrid.component';
 import { DragDropComponentComponent } from './drag-drop-component/drag-drop-component.component';
@@ -33,6 +33,7 @@ import { LoginLayoutComponentComponent } from './login-layout-component/login-la
 import { DashboardLayoutComponentComponent } from './dashboard-layout-component/dashboard-layout-component.component';
 
 import { SideBarComponent } from './sidebar/sidebar.component';
+import { CraftviewComponent } from './craftview/craftview.component';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import { SideBarComponent } from './sidebar/sidebar.component';
     BrowserAnimationsModule,
     FormsModule,
     NgxWidgetGridModule,
-    ChartModule.forRoot(require('highcharts')),
+    //ChartModule.forRoot(require('highcharts')),
     Ng2DragDropModule.forRoot(),
     AppRoutingModule//new routing module
   ],
@@ -55,7 +56,7 @@ import { SideBarComponent } from './sidebar/sidebar.component';
     CarouselComponent,
     AnimationComponent,
     DatatableComponent,
-    HighchartsComponent,
+    //HighchartsComponent,
     LoginviewComponent,
     WidgetgridComponent,
     DragDropComponentComponent,
@@ -64,7 +65,8 @@ import { SideBarComponent } from './sidebar/sidebar.component';
     HeaderComponent,
     LoginLayoutComponentComponent,
     DashboardLayoutComponentComponent,
-    SideBarComponent
+    SideBarComponent,
+    CraftviewComponent
   ],
   providers: [PeopleService],
   bootstrap: [AppComponent]
