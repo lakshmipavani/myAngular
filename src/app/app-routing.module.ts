@@ -7,65 +7,117 @@ import { ListviewComponent } from './listview/listview.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { DatatableComponent } from './datatable/datatable.component';
-import { HighchartsComponent } from './highcharts/highcharts.component';
+//import { HighchartsComponent } from './highcharts/highcharts.component';
 import { WidgetgridComponent } from './widgetgrid/widgetgrid.component';
 import { DragDropComponentComponent } from './drag-drop-component/drag-drop-component.component';
 import { ConverterComponent } from './converter/converter.component';
+import { SideBarComponent } from './sidebar/sidebar.component';
+import { CraftviewComponent } from './craftview/craftview.component';
+import { ShopmenuComponent } from './shopmenu/shopmenu.component';
+
+
+import { LoginviewComponent } from './loginview/loginview.component';
+import { LoginLayoutComponentComponent } from './login-layout-component/login-layout-component.component';
+import { DashboardLayoutComponentComponent } from './dashboard-layout-component/dashboard-layout-component.component';
+
 
   // Route config let's you map routes to components
   const routes: Routes = [
-      // map '/persons' to the people list component
-      {
-        path: 'persons',
-        component: PeopleListComponent
+         {
+          path: '',
+          component: LoginLayoutComponentComponent,
+          children: [
+            {
+            path:'login',component:LoginviewComponent
+            }
+          ]
       },
       {
-        path: 'persons/:id',
-        component: PersonDetailsComponent
-      },
-      // map '/' to '/persons' as our default route
-      {
-        path: '',
-        redirectTo: '/persons',
-        pathMatch: 'full'
-      },
-      {
-      path:'listview',
-      component:ListviewComponent
-      },
-      {
-      path:'tasks',
-      component: TasksComponent
-      },
-      {
-      path:'nav-bar',
-      component: NavBarComponent
-      },{
-      path:'carousel',
-      component: CarouselComponent
-      },
-      {
-      path:'DataTable',
-      component: DatatableComponent
-      },
-      {
-      path:'highcharts',
-      component: HighchartsComponent
-      },
-      {
-      path:'movablegrid',
-      component: WidgetgridComponent
-      },
-      {
-      path:'dragDrop',
-      component: DragDropComponentComponent
-      },
-      {
-      path:'converter',
-      component: ConverterComponent
+        path: 'dashboard',
+        component: DashboardLayoutComponentComponent,
+        children: [
+          {
+          path:'listview',component:ListviewComponent
+          },
+          {
+          path:'tasks',component: TasksComponent
+          },
+          {
+          path:'nav-bar',component: NavBarComponent
+          },
+          {
+          path:'carousel',component: CarouselComponent
+          },
+          {
+          path:'DataTable',component: DatatableComponent
+          },
+          {
+          path:'movablegrid',component: WidgetgridComponent
+          },
+          {
+          path:'dragDrop',component: DragDropComponentComponent
+          },
+          {
+          path:'converter',component: ConverterComponent
+          },
+          {
+          path: 'persons',component: PeopleListComponent
+          },
+          {
+          path: 'craftPage',
+          component: CraftviewComponent,
+              children:[
+                 {
+                 path:'shopMenu',component:ShopmenuComponent
+                 }
+               ]
+          },
+          {
+          path: 'sidebar',
+          component: SideBarComponent,
+          children:[
+            {
+          path:'listview',component:ListviewComponent
+          },
+          {
+          path:'tasks',component: TasksComponent
+          },
+          {
+          path:'nav-bar',component: NavBarComponent
+          },
+          {
+          path:'carousel',component: CarouselComponent
+          },
+          {
+          path:'DataTable',component: DatatableComponent
+          },
+          {
+          path:'movablegrid',component: WidgetgridComponent
+          },
+          {
+          path:'dragDrop',component: DragDropComponentComponent
+          },
+          {
+          path:'converter',component: ConverterComponent
+          },
+          {
+          path: 'persons',component: PeopleListComponent
+          },
+          {
+            path: 'craftPage',
+            component: CraftviewComponent,
+            children:[
+               {
+               path:'shopMenu',component:ShopmenuComponent
+               }
+             ]
+            }
+           ]
+          }
+        ]
       }
    ];
-
+  
 //export const appRouterModule = RouterModule.forRoot(routes);
 
 // HERE: New module
