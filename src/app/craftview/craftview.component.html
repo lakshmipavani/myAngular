@@ -1,11 +1,11 @@
-<div *ngIf=craftview style="width:100%;height:100%;background-color: #FFFEF6;" *ngIf=globalVariableService.showCraftView>
+<div style="width:100%;height:100%;background-color: #FFFEF6;" *ngIf=globalVariableService.craftView>
 	<div style="height:2%;width:100%;">
 	   <button class="homeButton" (click)="goToHome()">Home</button>
 	</div>
 	<div class="logoView"></div>
 	<div class="shopView">
 		<div style="padding-top: 1%;font-size: -webkit-xxx-large;float: right;margin-right: 15%;"> Make your home sweet </div>
-		<a [routerLink]="['shopMenu']" ><button class="shopButton" (click)="goToShowMenu"> Shop Now</button></a>
+		<a [routerLink]="['shopMenu']" ><button class="shopButton" (click)="goToShopMenu()">Shop Now</button></a>
 		<!-- <button class="shopButton" (click) ="goToShopView()">Shop Now</button> -->
 	</div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalVariableService } from '../global.service';
 
 @Component({
   selector: 'app-shopmenu',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopmenuComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public globalVariableService: GlobalVariableService) {
+    globalVariableService.showShopMenu(); 
+  }
+  goToCraftView(){
+    this.globalVariableService.hideShopMenu();
+  }
   ngOnInit() {
   }
 

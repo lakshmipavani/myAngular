@@ -1,4 +1,4 @@
-<p>
-  shopmenu works!
-</p>
+<div *ngIf=globalVariableService.shopMenu> 
+  <button class="craftBackButton" (click)="goToCraftView()">Back</button>
+</div>
 <router-outlet></router-outlet>

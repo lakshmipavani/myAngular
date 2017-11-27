@@ -1,0 +1,11 @@
+.craftBackButton{
+	width: 7%;
+    //height: 10%;
+    border: none;
+    font-size: 100%;
+    background-color: #d54d5c;
+    float: right;
+    margin-right:1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

@@ -15,9 +15,11 @@ export class GlobalVariableService{
     
   hideMenu(){
      this.visible = false;
+     this.craftView = true;
   }
   showMenu(){
      this.visible = true;
+     this.craftView = false;
   }
 
   hideCraftView(){
@@ -32,6 +34,7 @@ export class GlobalVariableService{
   hideShopMenu(){
       this.shopMenu = false;
       this.craftView = true;
+      this.visible = false;
   }
   showShopMenu(){
       this.shopMenu = true;

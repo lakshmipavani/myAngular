@@ -64,6 +64,9 @@ import { DashboardLayoutComponentComponent } from './dashboard-layout-component/
           path: 'persons',component: PeopleListComponent
           },
           {
+          path:'shopMenu',component:ShopmenuComponent
+          },
+          {
           path: 'craftPage',
           component: CraftviewComponent,
               children:[
