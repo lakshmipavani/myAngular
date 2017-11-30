@@ -9,3 +9,39 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.dropdown_container{
+   position:absolute;
+   clear:both;
+   width:100%;
+   text-transform: capitalize;
+   background-color: #FFFEF6;
+}
+
+.dropdown_menu{
+   display:table;
+   width: 70%;
+   border: none;
+   padding: 0;
+   margin: 10px 0px 0px 10px;
+}
+
+.dropdown_column{
+	display:table-cell;
+	line-height: 1.5em;
+	padding: 15px 15px 15px 15px;
+}
+
+.dropdown_title{
+	list-style: none;
+	border-bottom: solid 1px #383938;
+	padding: 0px 0px 10px 0px;
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+.dropdown_content{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}

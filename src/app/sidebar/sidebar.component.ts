@@ -34,7 +34,7 @@ import { Component } from '@angular/core';
                               <li ><a  [routerLink]="['converter']">Converter</a></li> -->
                  </ul>
           </div>
-      
+      <!-- side-bar content ending -->
 
       <!-- main-page content -->
       <div class="page-content-wrapper" [ngClass]="{'opened':_opened,'closed':!_opened}">
@@ -45,7 +45,6 @@ import { Component } from '@angular/core';
             <router-outlet></router-outlet>
       </div>
 
-      
   </div>
   `,
   styleUrls: ['./sidebar.component.css']

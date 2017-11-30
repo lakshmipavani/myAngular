@@ -38,6 +38,7 @@ import { DashboardLayoutComponentComponent } from './dashboard-layout-component/
 import { SideBarComponent } from './sidebar/sidebar.component';
 import { CraftviewComponent } from './craftview/craftview.component';
 import { ShopmenuComponent } from './shopmenu/shopmenu.component';
+import { CraftitemsComponent } from './craftitems/craftitems.component';
 
 
 
@@ -53,6 +54,7 @@ import { ShopmenuComponent } from './shopmenu/shopmenu.component';
   ],
   declarations: [
     AppComponent,
+    CraftitemsComponent,
     PeopleListComponent,
     PersonDetailsComponent,
     TasksComponent,
@@ -75,6 +77,7 @@ import { ShopmenuComponent } from './shopmenu/shopmenu.component';
     ShopmenuComponent
   ],
   providers: [PeopleService,GlobalVariableService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AppComponent, CraftitemsComponent]
 })
 export class AppModule { }

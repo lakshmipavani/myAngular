@@ -1,4 +1,53 @@
-<div *ngIf=globalVariableService.shopMenu> 
+<div *ngIf=globalVariableService.shopMenu style="width:100%;height:100%;background-color: #FFF;"> 
   <button class="craftBackButton" (click)="goToCraftView()">Back</button>
+			  <div  style="height:6%;width:10%;background-color:#fffef6;" (mouseover)="menuToggle($event)" (click)="menuToggle($event)">
+				         	<span class="icon-down-arrow">Shop</span>
+			  </div>
+       <div *ngIf="hoveredMenu" class="dropdown_container"><!--dropdowncontainer begin-->
+	         <div class="dropdown_menu">
+		            <div class="dropdown_column">
+		                <ul class="dropdown_title">
+		                	<li>Bath</li>
+		                </ul>
+		            	<ul class="dropdown_content">
+		            	   <li>bath bombs</li>
+		            	   <li>bath salts</li>
+		            	</ul>
+		            </div>
+		            <div class="dropdown_column">
+		                <ul class="dropdown_title">
+		                	<li>crafting</li>
+		                </ul>
+		            	<ul class="dropdown_content">
+		            	   <li (click)="selectValue($event)">stencils</li>
+		            	   <li>jewelry</li>
+		            	   <li>marker kits</li>
+		            	</ul>
+		            </div>
+		            <div class="dropdown_column">
+		                <ul class="dropdown_title">
+		                	<li>garden</li>
+		                </ul>
+		            	<ul class="dropdown_content">
+		            	   <li>seeds</li>
+		            	   <li>garden tools</li>
+		            	</ul>
+		            </div>
+		            <div class="dropdown_column">
+		                <ul class="dropdown_title">
+		                	<li>kitchen</li>
+		                </ul>
+		            	<ul class="dropdown_content">
+		            	   <li>Food</li>
+		            	   <li>Canning</li>
+		            	</ul>
+		            </div>
+	         </div>
+	   </div><!--dropdowncontainer end-->
+	   <div style="height:100%;width:100%;background-color:#fffef6;">
+		      <div #shopContainer>
+		      	
+		      </div>
+	   </div>
 </div>
 <router-outlet></router-outlet>

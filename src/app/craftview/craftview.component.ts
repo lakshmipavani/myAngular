@@ -10,10 +10,10 @@ import { GlobalVariableService } from '../global.service';
 export class CraftviewComponent implements OnInit {
 
   constructor(public globalVariableService: GlobalVariableService) { 
-    globalVariableService.hideMenu(); 
+    globalVariableService.hideMenu();
   }
   goToHome(){
-    this.globalVariableService.hideMenu();  
+    this.globalVariableService.showMenu();
   }
   goToShopMenu(){
     this.globalVariableService.showShopMenu();
