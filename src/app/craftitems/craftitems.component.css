@@ -1,48 +1,65 @@
 .popstand{
     background-image: url('../../assets/popstand.jpg');
     background-repeat: no-repeat;
-    height: 23%;
-    width: 30%;
     background-size: 100%;
-    margin-left: 39%;
+    //margin-left: 39%;
+    grid-column: 1;
+  grid-row: 1;
 }
 .popsticks{
     background-image: url('../../assets/popsticks.jpg');
     background-repeat: no-repeat;
-    height: 23%;
-    width: 30%;
     background-size: 100%;
-    margin-left: 39%;
+    //margin-left: 39%;
+    grid-column: 2;
+  grid-row: 1;
 }
 .popdoll{
     background-image: url('../../assets/popdoll.jpg');
     background-repeat: no-repeat;
-    height: 23%;
-    width: 30%;
     background-size: 100%;
-    margin-left: 39%;
+    //margin-left: 39%;
+    grid-column: 3;
+  grid-row: 1;
 }
 .cupmaker{
     background-image: url('../../assets/cupmaker.jpg');
     background-repeat: no-repeat;
-    height: 23%;
-    width: 30%;
     background-size: 100%;
-    margin-left: 39%;
+    //margin-left: 39%;
+    grid-column: 1;
+  grid-row: 2;
 }
 .jarmaker{
     background-image: url('../../assets/jarmaker.jpg');
     background-repeat: no-repeat;
-    height: 23%;
-    width: 30%;
     background-size: 100%;
-    margin-left: 39%;
+    //margin-left: 39%;
+    grid-column: 2;
+  grid-row: 2;
 }
 .insectcup{
     background-image: url('../../assets/insectcup.jpg');
     background-repeat: no-repeat;
-    height: 23%;
-    width: 30%;
     background-size: 100%;
+    //margin-left: 39%;
+    grid-column: 3;
+  grid-row: 2;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 32% [col-start]);
+    grid-template-rows: repeat(2, 200px [row-start]);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    margin-left: 15px;
+}
+.logoView{
+    background-image: url('../../assets/logo.png');
+    height: 7%;
+    //width: 62%;
+    background-size: 23%;
     margin-left: 39%;
+    background-repeat: no-repeat;
 }

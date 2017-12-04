@@ -1,13 +1,13 @@
 .craftBackButton{
-	width: 7%;
-    //height: 10%;
+      /* width: 54%; */
     border: none;
     font-size: 100%;
     background-color: #d54d5c;
-    float: right;
-    margin-right:1px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* margin-right: -41px; */
+    padding-top: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 8px;
 }
 
 .dropdown_container{
@@ -29,11 +29,12 @@
 .dropdown_column{
 	display:table-cell;
 	line-height: 1.5em;
-	padding: 15px 15px 15px 15px;
+	padding: 15px 50px 15px 15px;
 }
 
 .dropdown_title{
 	list-style: none;
+  color:#01ccbe;
 	border-bottom: solid 1px #383938;
 	padding: 0px 0px 10px 0px;
 	text-transform: uppercase;
@@ -44,4 +45,13 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
+}
+
+.logoView{
+  background-image: url('../../assets/logo.png');
+    height: 7%;
+    //width: 62%;
+    background-size: 23%;
+    margin-left: 39%;
+    background-repeat: no-repeat;
 }

@@ -40,6 +40,8 @@ import { CraftviewComponent } from './craftview/craftview.component';
 import { ShopmenuComponent } from './shopmenu/shopmenu.component';
 import { CraftitemsComponent } from './craftitems/craftitems.component';
 
+import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome'
+
 
 
 @NgModule({
@@ -50,7 +52,8 @@ import { CraftitemsComponent } from './craftitems/craftitems.component';
     NgxWidgetGridModule,
     //ChartModule.forRoot(require('highcharts')),
     Ng2DragDropModule.forRoot(),
-    AppRoutingModule//new routing module
+    AppRoutingModule,//new routing module
+    Angular2FontawesomeModule 
   ],
   declarations: [
     AppComponent,
