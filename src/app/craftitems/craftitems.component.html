@@ -1,12 +1,30 @@
 <div style="height:100%;width:70%;float: none;
     display: block;
-    margin: 0 auto;margin-top: 2%;">
+    margin: 0 auto;margin-top: 2%;--rowNum: 10;
+  --colNum: 3;
+  --gridHeight: 120px;">
   <div class="container">
-		<div class="popstand"></div>
-		<div class="popsticks"></div>
-		<div class="popdoll"></div>
-		<div class="cupmaker"></div>
-		<div class="jarmaker"></div>
-		<div class="insectcup"></div>
+		<div class="popstand grid-item" id="popstand" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'>
+			<div *ngIf="_itemHovered == 'popstand'" class="hoverViewContainer">
+				<button (click)="showDialog" class="btn">Edit</button>
+				<button (click)="showDialog" class="btn">Delete</button>
+			</div>
+		</div>
+		<div class="popsticks grid-item" id="popsticks" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
+		<div class="popdoll grid-item" id="popdoll" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
+		<div class="cupmake grid-item" id="cupmaker" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
+		<div class="jarmaker grid-item" id="jarmaker" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
+		<div class="insectcup grid-item" id="insectcup" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
+		<div class="popdoll grid-item" id="popdoll" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
+		<div class="jarmaker grid-item" id="jarmaker" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
+		<div class="insectcup grid-item" id="insectcup" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
+		<div class="popdoll grid-item" id="popdoll" (mouseover)='hoverView($event)'></div>
+		<div class="jarmaker grid-item" id="jarmaker" (mouseover)='hoverView($event)'></div>
+		<div class="insectcup grid-item" id="insectcup" (mouseover)='hoverView($event)'></div>
+		<div class="jarmaker grid-item" id="jarmaker" (mouseover)='hoverView($event)'></div>
+		<div class="insectcup grid-item" id="insectcup" (mouseover)='hoverView($event)'></div>
+		<div class="popdoll grid-item" id="popdoll" (mouseover)='hoverView($event)'></div>
+		<div class="jarmaker grid-item" id="jarmaker" (mouseover)='hoverView($event)'></div>
+		<div class="insectcup grid-item" id="insectcup" (mouseover)='hoverView($event)'></div>
   </div>
 </div>

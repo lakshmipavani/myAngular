@@ -3,51 +3,51 @@
     background-repeat: no-repeat;
     background-size: 100%;
     //margin-left: 39%;
-    grid-column: 1;
-  grid-row: 1;
+    //grid-column: 1;
+  //grid-row: 1;
 }
 .popsticks{
     background-image: url('../../assets/popsticks.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     //margin-left: 39%;
-    grid-column: 2;
-  grid-row: 1;
+   //grid-column: 2;
+  //grid-row: 1;
 }
 .popdoll{
     background-image: url('../../assets/popdoll.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     //margin-left: 39%;
-    grid-column: 3;
-  grid-row: 1;
+    //grid-column: 3;
+  //grid-row: 1;
 }
 .cupmaker{
     background-image: url('../../assets/cupmaker.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     //margin-left: 39%;
-    grid-column: 1;
-  grid-row: 2;
+    //grid-column: 1;
+  //grid-row: 2;
 }
 .jarmaker{
     background-image: url('../../assets/jarmaker.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     //margin-left: 39%;
-    grid-column: 2;
-  grid-row: 2;
+    //grid-column: 2;
+  //grid-row: 2;
 }
 .insectcup{
     background-image: url('../../assets/insectcup.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     //margin-left: 39%;
-    grid-column: 3;
-  grid-row: 2;
+    //grid-column: 3;
+  //grid-row: 2;
 }
 
-.container {
+.wrapper {
     display: grid;
     grid-template-columns: repeat(3, 32% [col-start]);
     grid-template-rows: repeat(2, 200px [row-start]);
@@ -62,4 +62,21 @@
     background-size: 23%;
     margin-left: 39%;
     background-repeat: no-repeat;
+}
+.hoverViewContainer {
+  
+}
+.container {
+  display: grid;
+  grid-template-rows: repeat(var(--rowNum), var(--gridHeight));
+  grid-template-columns: repeat(var(--colNum), 32%);
+}
+.grid-item {
+  grid-column-start: auto;
+  grid-row-start: auto;
+  margin: 5px;
+}
+.hoverViewContainer{
+    margin-top: 28%;
+    float: right;
 }
