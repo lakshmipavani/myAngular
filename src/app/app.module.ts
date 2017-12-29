@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
+import { HttpModule }      from '@angular/http';
+
 import { ChartModule } from 'angular2-highcharts';
 import { Ng2DragDropModule } from '../../node_modules/ng2-drag-drop';
 
@@ -47,6 +49,7 @@ import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawe
 @NgModule({
   imports: [
     BrowserModule,
+    HttpModule,
     BrowserAnimationsModule,
     FormsModule,
     NgxWidgetGridModule,

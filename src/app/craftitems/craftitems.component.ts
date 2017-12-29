@@ -1,4 +1,5 @@
 import { Component, OnInit,ViewChild,ViewContainerRef,ComponentFactoryResolver } from '@angular/core';
+import {Http} from '@angular/http';
 
 @Component({
   selector: 'app-craftitems',
@@ -7,8 +8,15 @@ import { Component, OnInit,ViewChild,ViewContainerRef,ComponentFactoryResolver }
 })
 export class CraftitemsComponent implements OnInit {
    _itemHovered;
-  constructor(public viewContainerRef: ViewContainerRef) {
-  }
+   data;
+   imagesObject;
+  constructor(public viewContainerRef: ViewContainerRef,private http:Http) {
+            this.http.get('https://jsoneditoronline.herokuapp.com/v1/docs/f3fb9e93655a651a14b7ae6fd0c8e882')
+                          .subscribe(res => this.data = res.json()
+                          );
+                         // console.log(this.data);
+                       this.imagesObject=this.data;
+            }
   ngOnInit() {
   }
   hoverView(event){
@@ -18,6 +26,7 @@ export class CraftitemsComponent implements OnInit {
      if(event.type == "mouseover"){
          let target = event.target;
          this._itemHovered = event.target.id;
+         console.log(this.data);
      }else{
          let target = event.target;
          this._itemHovered = false;
