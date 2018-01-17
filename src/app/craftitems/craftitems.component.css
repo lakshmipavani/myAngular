@@ -2,6 +2,10 @@
     background-image: url('../../assets/popstand.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    height: 100%;
+    grid-column-start: auto;
+  grid-row-start: auto;
+  margin: 5px;
     //margin-left: 39%;
     //grid-column: 1;
   //grid-row: 1;
@@ -10,6 +14,9 @@
     background-image: url('../../assets/popsticks.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    grid-column-start: auto;
+  grid-row-start: auto;
+  margin: 5px;
     //margin-left: 39%;
    //grid-column: 2;
   //grid-row: 1;
@@ -18,6 +25,9 @@
     background-image: url('../../assets/popdoll.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    grid-column-start: auto;
+  grid-row-start: auto;
+  margin: 5px;
     //margin-left: 39%;
     //grid-column: 3;
   //grid-row: 1;
@@ -26,6 +36,9 @@
     background-image: url('../../assets/cupmaker.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    grid-column-start: auto;
+  grid-row-start: auto;
+  margin: 5px;
     //margin-left: 39%;
     //grid-column: 1;
   //grid-row: 2;
@@ -34,6 +47,9 @@
     background-image: url('../../assets/jarmaker.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    grid-column-start: auto;
+  grid-row-start: auto;
+  margin: 5px;
     //margin-left: 39%;
     //grid-column: 2;
   //grid-row: 2;
@@ -42,11 +58,13 @@
     background-image: url('../../assets/insectcup.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
+    grid-column-start: auto;
+  grid-row-start: auto;
+  margin: 5px;
     //margin-left: 39%;
     //grid-column: 3;
   //grid-row: 2;
 }
-
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 32% [col-start]);
@@ -63,9 +81,6 @@
     margin-left: 39%;
     background-repeat: no-repeat;
 }
-.hoverViewContainer {
-  
-}
 .container {
   display: grid;
   grid-template-rows: repeat(var(--rowNum), var(--gridHeight));
@@ -77,8 +92,15 @@
   margin: 5px;
 }
 .hoverViewContainer{
-    margin-top: 28%;
-    float: right;
+/*    margin-top: 58%;
+    margin-left: 20%;*/
+}
+.description {
+    display:none;
+    position:absolute;
+    border:1px solid #000;
+    width:400px;
+    height:400px;
 }
 .overlay {
   position: fixed;

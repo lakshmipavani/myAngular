@@ -4,31 +4,24 @@
   --colNum: 3;
   --gridHeight: 120px;">
   <div class="container">
-		<div class="popstand grid-item" id="popstand" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'>
-			<div *ngIf="_itemHovered == 'popstand'" class="hoverViewContainer">
-				<button (click)="showDialog" class="btn">Edit</button>
-				<button (click)="showDialog" class="btn">Delete</button>
-			</div>
-			<div>{{this.data}}</div>
-		<!-- 	<div *ngFor="imagesObjects of imagesObject">
-				<div>rghjregreg</div>
-			</div> -->
+    <div class ="sampleEvent">
+	    <div class="popstand grid-item" id="popstand" (mouseenter)='hoverView($event)'>
+	    <div  *ngIf="_itemHovered" class="hoverViewContainer">
+				<button (click)="showDialog = !showDialog" class="btn">Open</button>
 		</div>
-		<div class="popsticks grid-item" id="popsticks" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
-		<div class="popdoll grid-item" id="popdoll" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
-		<div class="cupmake grid-item" id="cupmaker" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
-		<div class="jarmaker grid-item" id="jarmaker" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
-		<div class="insectcup grid-item" id="insectcup" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
-		<div class="popdoll grid-item" id="popdoll" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
-		<div class="jarmaker grid-item" id="jarmaker" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
-		<div class="insectcup grid-item" id="insectcup" (mouseover)='hoverView($event)' (mouseout)='hoverView($event)'></div>
-		<div class="popdoll grid-item" id="popdoll" (mouseover)='hoverView($event)'></div>
-		<div class="jarmaker grid-item" id="jarmaker" (mouseover)='hoverView($event)'></div>
-		<div class="insectcup grid-item" id="insectcup" (mouseover)='hoverView($event)'></div>
-		<div class="jarmaker grid-item" id="jarmaker" (mouseover)='hoverView($event)'></div>
-		<div class="insectcup grid-item" id="insectcup" (mouseover)='hoverView($event)'></div>
-		<div class="popdoll grid-item" id="popdoll" (mouseover)='hoverView($event)'></div>
-		<div class="jarmaker grid-item" id="jarmaker" (mouseover)='hoverView($event)'></div>
-		<div class="insectcup grid-item" id="insectcup" (mouseover)='hoverView($event)'></div>
+		</div>
+		<div class="popsticks grid-item" id="popsticks" (mouseenter)='hoverView($event)'>
+		<div  *ngIf="_itemHovered" class="hoverViewContainer">
+				<button (click)="showDialog = !showDialog" class="btn">Open</button>
+		</div>
+		</div>
+		<app-dialog [(visible)]="showDialog">
+		<h1 *ngIf="currentObject">{{imagesObject[currentObject].name}}</h1>
+		<div *ngIf="currentObject">
+			<img src="{{imagesObject[currentObject].src}}">
+		</div>
+		<button (click)="showDialog = !showDialog" class="btn">Close</button>
+	    </app-dialog>
+    </div>
   </div>
 </div>

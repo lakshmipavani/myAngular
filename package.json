@@ -31,6 +31,7 @@
     "jquery": "^3.2.1",
     "ng2-drag-drop": "^3.0.2",
     "ng2-opd-popup": "^1.1.17",
+    "ng2-popover": "0.0.14",
     "ng2-sidebar": "^1.8.2",
     "ngx-widget-grid": "^2.0.6",
     "requirejs": "^2.3.5",

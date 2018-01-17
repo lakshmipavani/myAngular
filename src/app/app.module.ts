@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }      from '@angular/http';
+import { PopoverModule } from "ng2-popover";
 
 import { ChartModule } from 'angular2-highcharts';
 import { Ng2DragDropModule } from '../../node_modules/ng2-drag-drop';
@@ -42,7 +43,8 @@ import { CraftviewComponent } from './craftview/craftview.component';
 import { ShopmenuComponent } from './shopmenu/shopmenu.component';
 import { CraftitemsComponent } from './craftitems/craftitems.component';
 
-import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome'
+import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
+import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 
 
 
@@ -56,7 +58,8 @@ import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawe
     //ChartModule.forRoot(require('highcharts')),
     Ng2DragDropModule.forRoot(),
     AppRoutingModule,//new routing module
-    Angular2FontawesomeModule 
+    Angular2FontawesomeModule,
+    PopoverModule
   ],
   declarations: [
     AppComponent,
@@ -80,7 +83,8 @@ import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawe
     DashboardLayoutComponentComponent,
     SideBarComponent,
     CraftviewComponent,
-    ShopmenuComponent
+    ShopmenuComponent,
+    ModalDialogComponent
   ],
   providers: [PeopleService,GlobalVariableService],
   bootstrap: [AppComponent],

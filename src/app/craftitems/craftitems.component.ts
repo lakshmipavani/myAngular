@@ -1,5 +1,7 @@
 import { Component, OnInit,ViewChild,ViewContainerRef,ComponentFactoryResolver } from '@angular/core';
 import {Http} from '@angular/http';
+import * as $ from 'jquery';
+import { ModalDialogComponent } from '../modal-dialog/modal-dialog.component';
 
 @Component({
   selector: 'app-craftitems',
@@ -7,11 +9,12 @@ import {Http} from '@angular/http';
   styleUrls: ['./craftitems.component.css']
 })
 export class CraftitemsComponent implements OnInit {
-   _itemHovered;
+   private _itemHovered:boolean=false;
    data;
    imagesObject;
+   currentObject;
   constructor(public viewContainerRef: ViewContainerRef,private http:Http) {
-            this.http.get('https://jsoneditoronline.herokuapp.com/v1/docs/f3fb9e93655a651a14b7ae6fd0c8e882')
+            this.http.get('https://jsoneditoronline.herokuapp.com/v1/docs/7d1144556dcbcb6d207e23474dc78a8a')
                           .subscribe(res => this.data = res.json()
                           );
                          // console.log(this.data);
@@ -23,17 +26,22 @@ export class CraftitemsComponent implements OnInit {
      console.log(event+"hover event.");
      //this.shopContainer.createComponent(craftitemsComponent);
      // event.preventDefault();
-     if(event.type == "mouseover"){
+     if(event.type == "mouseenter"){
          let target = event.target;
-         this._itemHovered = event.target.id;
-         console.log(this.data);
-     }else{
-         let target = event.target;
-         this._itemHovered = false;
-         //target.style.background = 'none';
+         //this._itemHovered = event.target.id;
+         this._itemHovered=true;
+         //this.imagesObject=this.data;
+         this.imagesObject = JSON.parse(this.data.data);
+         this.currentObject = this.imagesObject[event.currentTarget.id]?event.currentTarget.id:"";
+         console.log(this.imagesObject);
      }
   }
-  showDialog(){
-    console.log(event+"editted/deleted event.");
+  editPopupClose($event){
+        this._itemHovered=false;
+  }
+  showDialogValue(event){
+    this._itemHovered=false;
+    console.log(this.currentObject);
+    $(".description").show();
   }
 }
