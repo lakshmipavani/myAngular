@@ -13,6 +13,7 @@ export class CraftitemsComponent implements OnInit {
    data;
    imagesObject;
    currentObject;
+   private dataRetrieved:boolean=false;
   constructor(public viewContainerRef: ViewContainerRef,private http:Http) {
             this.http.get('https://jsoneditoronline.herokuapp.com/v1/docs/7d1144556dcbcb6d207e23474dc78a8a')
                           .subscribe(res => this.data = res.json()
@@ -21,6 +22,10 @@ export class CraftitemsComponent implements OnInit {
                        this.imagesObject=this.data;
             }
   ngOnInit() {
+  }
+  sampleData($event){
+  this.dataRetrieved=true;
+   this.imagesObject = JSON.parse(this.data.data);
   }
   hoverView(event){
      console.log(event+"hover event.");

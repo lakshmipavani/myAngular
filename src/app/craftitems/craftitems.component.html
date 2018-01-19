@@ -4,17 +4,25 @@
   --colNum: 3;
   --gridHeight: 120px;">
   <div class="container">
-    <div class ="sampleEvent">
-	    <div class="popstand grid-item" id="popstand" (mouseenter)='hoverView($event)'>
+  <button (click)='sampleData(event)'>Get Sample Data</button>
+    <div *ngIf="dataRetrieved" class ="sampleEvent">
+      <div *ngFor="let item of imagesObject">
+      	    <div class=item.name id=item.name (mouseenter)='hoverView($event)'>
+			    <div  *ngIf="_itemHovered" class="hoverViewContainer">
+						<button (click)="showDialog = !showDialog" class="btn">MoreInfo</button>
+				</div>
+		    </div>
+      </div>
+	    <!-- <div class="popstand grid-item" id="popstand" (mouseenter)='hoverView($event)'>
 	    <div  *ngIf="_itemHovered" class="hoverViewContainer">
-				<button (click)="showDialog = !showDialog" class="btn">Open</button>
+				<button (click)="showDialog = !showDialog" class="btn">MoreInfo</button>
 		</div>
 		</div>
 		<div class="popsticks grid-item" id="popsticks" (mouseenter)='hoverView($event)'>
 		<div  *ngIf="_itemHovered" class="hoverViewContainer">
-				<button (click)="showDialog = !showDialog" class="btn">Open</button>
+				<button (click)="showDialog = !showDialog" class="btn">MoreInfo</button>
 		</div>
-		</div>
+		</div> -->
 		<app-dialog [(visible)]="showDialog">
 		<h1 *ngIf="currentObject">{{imagesObject[currentObject].name}}</h1>
 		<div *ngIf="currentObject">
