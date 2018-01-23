@@ -2,6 +2,10 @@ import { Component, OnInit,ViewChild,ViewContainerRef,ComponentFactoryResolver }
 import {Http} from '@angular/http';
 import * as $ from 'jquery';
 import { ModalDialogComponent } from '../modal-dialog/modal-dialog.component';
+import {DataService} from '../data.service';
+import {ApiService} from '../data.service';
+
+import { IPosts } from '../person';
 
 @Component({
   selector: 'app-craftitems',
@@ -10,34 +14,30 @@ import { ModalDialogComponent } from '../modal-dialog/modal-dialog.component';
 })
 export class CraftitemsComponent implements OnInit {
    private _itemHovered:boolean=false;
-   data;
+   sampleData;
    imagesObject;
    currentObject;
-   private dataRetrieved:boolean=false;
-  constructor(public viewContainerRef: ViewContainerRef,private http:Http) {
-            this.http.get('https://jsoneditoronline.herokuapp.com/v1/docs/7d1144556dcbcb6d207e23474dc78a8a')
-                          .subscribe(res => this.data = res.json()
-                          );
-                         // console.log(this.data);
-                       this.imagesObject=this.data;
+   foods;
+   _postsArray: IPosts[];
+   constructor(public viewContainerRef: ViewContainerRef,private http:Http,private dataService:DataService,private apiSerivce: ApiService) {
             }
   ngOnInit() {
+        this.getImages();
   }
-  sampleData($event){
-  this.dataRetrieved=true;
-   this.imagesObject = JSON.parse(this.data.data);
+  getImages() {
+    this.apiSerivce.getFoods().subscribe(
+      data => { this.imagesObject = data}
+    );
+    this.imagesObject=Array.of(this.imagesObject);
+    console.log(this.imagesObject);
   }
   hoverView(event){
-     console.log(event+"hover event.");
-     //this.shopContainer.createComponent(craftitemsComponent);
-     // event.preventDefault();
+     console.log(this._postsArray);
      if(event.type == "mouseenter"){
          let target = event.target;
-         //this._itemHovered = event.target.id;
          this._itemHovered=true;
-         //this.imagesObject=this.data;
-         this.imagesObject = JSON.parse(this.data.data);
-         this.currentObject = this.imagesObject[event.currentTarget.id]?event.currentTarget.id:"";
+         //this.imagesObject = JSON.parse(this.sampleData.data);
+         this.currentObject = event.currentTarget.id;
          console.log(this.imagesObject);
      }
   }

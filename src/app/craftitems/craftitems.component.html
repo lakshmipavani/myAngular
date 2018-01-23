@@ -1,35 +1,29 @@
-<div style="height:100%;width:70%;float: none;
+
+  <div *ngIf="(imagesObject | json) != '{}'">
+    <h2>Foods</h2>
+  <ul>
+    <li *ngFor="let food of imagesObject">{{food.name}}</li>
+  </ul>
+  </div>
+  <div style="height:100%;width:70%;float: none;
     display: block;
     margin: 0 auto;margin-top: 2%;--rowNum: 10;
   --colNum: 3;
   --gridHeight: 120px;">
-  <div class="container">
-  <button (click)='sampleData(event)'>Get Sample Data</button>
-    <div *ngIf="dataRetrieved" class ="sampleEvent">
-      <div *ngFor="let item of imagesObject">
-      	    <div class=item.name id=item.name (mouseenter)='hoverView($event)'>
-			    <div  *ngIf="_itemHovered" class="hoverViewContainer">
-						<button (click)="showDialog = !showDialog" class="btn">MoreInfo</button>
-				</div>
-		    </div>
+  <div class="container" >
+     <div *ngFor="let item of imagesObject">
+            <div class="{{item.name}}" id="{{item.name}}" (mouseenter)='hoverView($event)'>
+          <div  *ngIf="_itemHovered" class="hoverViewContainer">
+            <button (click)="showDialog = !showDialog" class="btn">MoreInfo</button>
+        </div>
       </div>
-	    <!-- <div class="popstand grid-item" id="popstand" (mouseenter)='hoverView($event)'>
-	    <div  *ngIf="_itemHovered" class="hoverViewContainer">
-				<button (click)="showDialog = !showDialog" class="btn">MoreInfo</button>
-		</div>
-		</div>
-		<div class="popsticks grid-item" id="popsticks" (mouseenter)='hoverView($event)'>
-		<div  *ngIf="_itemHovered" class="hoverViewContainer">
-				<button (click)="showDialog = !showDialog" class="btn">MoreInfo</button>
-		</div>
-		</div> -->
-		<app-dialog [(visible)]="showDialog">
-		<h1 *ngIf="currentObject">{{imagesObject[currentObject].name}}</h1>
-		<div *ngIf="currentObject">
-			<img src="{{imagesObject[currentObject].src}}">
-		</div>
-		<button (click)="showDialog = !showDialog" class="btn">Close</button>
-	    </app-dialog>
+    <app-dialog [(visible)]="showDialog">
+    <h1 *ngIf="currentObject">{{currentObject}}</h1>
+    <div *ngIf="currentObject">
+      <img src="{{imagesObject[currentObject].src}}">
+    </div>
+    <button (click)="showDialog = !showDialog" class="btn">Close</button>
+      </app-dialog>
     </div>
   </div>
 </div>

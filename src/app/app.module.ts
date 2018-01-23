@@ -17,6 +17,8 @@ import { PeopleListComponent } from './people-list/people-list.component';
 
 import { PeopleService } from './people.service';
 import { GlobalVariableService } from './global.service';
+import { DataService } from './data.service';
+import { ApiService } from './data.service';
 
 import { PersonDetailsComponent } from './person-details/person-details.component';
 
@@ -86,7 +88,7 @@ import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
     ShopmenuComponent,
     ModalDialogComponent
   ],
-  providers: [PeopleService,GlobalVariableService],
+  providers: [PeopleService,GlobalVariableService,DataService,ApiService],
   bootstrap: [AppComponent],
   entryComponents: [AppComponent, CraftitemsComponent]
 })
