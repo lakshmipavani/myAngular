@@ -1,6 +1,7 @@
 import { Component, OnInit,ViewChild,ViewContainerRef,ComponentFactoryResolver } from '@angular/core';
 import {Http} from '@angular/http';
 import * as $ from 'jquery';
+import * as _ from 'underscore';
 import { ModalDialogComponent } from '../modal-dialog/modal-dialog.component';
 import {DataService} from '../data.service';
 import {ApiService} from '../data.service';
@@ -14,8 +15,8 @@ import { IPosts } from '../person';
 })
 export class CraftitemsComponent implements OnInit {
    private _itemHovered:boolean=false;
-   sampleData;
    imagesObject;
+   imagesObjectValues;
    currentObject;
    foods;
    _postsArray: IPosts[];
@@ -25,11 +26,15 @@ export class CraftitemsComponent implements OnInit {
         this.getImages();
   }
   getImages() {
-    this.apiSerivce.getFoods().subscribe(
+    this.apiSerivce.getImagesObject().subscribe(
       data => { this.imagesObject = data}
     );
     this.imagesObject=Array.of(this.imagesObject);
-    console.log(this.imagesObject);
+
+    this.apiSerivce.getImagesObjectValues().subscribe(
+      data => { this.imagesObjectValues = data}
+    );
+    //this.imagesObjectValues=Array.of(this.imagesObject);
   }
   hoverView(event){
      console.log(this._postsArray);
@@ -37,12 +42,12 @@ export class CraftitemsComponent implements OnInit {
          let target = event.target;
          this._itemHovered=true;
          //this.imagesObject = JSON.parse(this.sampleData.data);
-         this.currentObject = event.currentTarget.id;
-         console.log(this.imagesObject);
+         this.currentObject = this.imagesObjectValues[event.currentTarget.id]?event.currentTarget.id:"";
+         console.log(this.imagesObjectValues);
      }
   }
   editPopupClose($event){
-        this._itemHovered=false;
+        this._itemHovered=false;   
   }
   showDialogValue(event){
     this._itemHovered=false;

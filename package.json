@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
     "@ngui/ngui": "^0.15.2",
+    "@types/underscore": "^1.8.7",
     "angular2-fontawesome": "^0.9.3",
     "angular2-highcharts": "^0.5.5",
     "chart.js": "^2.7.1",
@@ -36,6 +37,7 @@
     "ngx-widget-grid": "^2.0.6",
     "requirejs": "^2.3.5",
     "rxjs": "^5.4.2",
+    "underscore": "^1.8.3",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

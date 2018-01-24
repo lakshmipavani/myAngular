@@ -1,10 +1,6 @@
 
-  <div *ngIf="(imagesObject | json) != '{}'">
-    <h2>Foods</h2>
-  <ul>
-    <li *ngFor="let food of imagesObject">{{food.name}}</li>
-  </ul>
-  </div>
+  <!-- <div *ngIf="(imagesObject | json) != '{}'"> -->
+
   <div style="height:100%;width:70%;float: none;
     display: block;
     margin: 0 auto;margin-top: 2%;--rowNum: 10;
@@ -20,7 +16,7 @@
     <app-dialog [(visible)]="showDialog">
     <h1 *ngIf="currentObject">{{currentObject}}</h1>
     <div *ngIf="currentObject">
-      <img src="{{imagesObject[currentObject].src}}">
+      <img src="{{imagesObjectValues[currentObject]}}">
     </div>
     <button (click)="showDialog = !showDialog" class="btn">Close</button>
       </app-dialog>

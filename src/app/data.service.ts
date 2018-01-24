@@ -35,8 +35,11 @@ export class DataService {
              })
              .catch(this.handleError);
      }
-     getFoods() {
+     getImagesObject() {
       return this.http.get('../assets/imagesObject.json').map((res:Response) => res.json());
+     }
+     getImagesObjectValues() {
+      return this.http.get('../assets/imageObjectValues.json').map((res:Response) => res.json());
      }
      private handleError(error: Response) {
          return Observable.throw(error.statusText);
