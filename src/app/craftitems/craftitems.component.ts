@@ -1,17 +1,21 @@
-import { Component, OnInit,ViewChild,ViewContainerRef,ComponentFactoryResolver } from '@angular/core';
+import { Component, OnInit,  OnChanges, EventEmitter, 
+  trigger, state, style, animate, transition } from '@angular/core';
 import {Http} from '@angular/http';
 import * as $ from 'jquery';
 import * as _ from 'underscore';
 import { ModalDialogComponent } from '../modal-dialog/modal-dialog.component';
 import {DataService} from '../data.service';
 import {ApiService} from '../data.service';
-
 import { IPosts } from '../person';
+import { Popup } from '../popup/popup.component';
+import { PopupService } from '../popup.service';
+import { DetailviewComponent } from '../detailview/detailview.component';
 
 @Component({
   selector: 'app-craftitems',
   templateUrl: './craftitems.component.html',
   styleUrls: ['./craftitems.component.css']
+ 
 })
 export class CraftitemsComponent implements OnInit {
    private _itemHovered:boolean=false;
@@ -19,19 +23,22 @@ export class CraftitemsComponent implements OnInit {
    imagesObjectValues;
    currentObject;
    foods;
+   showDialog = false;
+   visible;
    _postsArray: IPosts[];
-   constructor(public viewContainerRef: ViewContainerRef,private http:Http,private dataService:DataService,private apiSerivce: ApiService) {
+   constructor(private http:Http,private dataService:DataService,private apiService: ApiService,
+   private popupService:PopupService) {
             }
   ngOnInit() {
         this.getImages();
   }
   getImages() {
-    this.apiSerivce.getImagesObject().subscribe(
+    this.apiService.getImagesObject().subscribe(
       data => { this.imagesObject = data}
     );
     this.imagesObject=Array.of(this.imagesObject);
 
-    this.apiSerivce.getImagesObjectValues().subscribe(
+    this.apiService.getImagesObjectValues().subscribe(
       data => { this.imagesObjectValues = data}
     );
     //this.imagesObjectValues=Array.of(this.imagesObject);
@@ -46,12 +53,11 @@ export class CraftitemsComponent implements OnInit {
          console.log(this.imagesObjectValues);
      }
   }
-  editPopupClose($event){
-        this._itemHovered=false;   
-  }
-  showDialogValue(event){
-    this._itemHovered=false;
-    console.log(this.currentObject);
-    $(".description").show();
-  }
+   openPopup() {
+   this.popupService.open(DetailviewComponent, [
+     {
+       provide: "sample", useValue: "ejhferkjfberkhb"
+     }
+   ]);
+ }
 }

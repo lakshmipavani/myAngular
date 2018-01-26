@@ -1,0 +1,26 @@
+<p>
+  detailview works!
+</p>
+
+<!-- <app-dialog [(visible)]="showDialog">
+    <h1 *ngIf="currentObject">{{currentObject}}</h1>
+    <div *ngIf="currentObject">
+      <img src="{{imagesObjectValues[currentObject]}}">
+    </div>
+    <button (click)="showDialog = !showDialog" class="btn">Close</button>
+</app-dialog> -->
+<div class="modal fade in">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Modal title B</h4>
+      </div>
+      <div class="modal-body">
+         This is popup b: {{ id }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="close()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

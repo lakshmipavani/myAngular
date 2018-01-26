@@ -1,30 +1,64 @@
-import {Component,ViewChild} from '@angular/core';
-import {Popup} from 'ng2-opd-popup';
+import {
+  Component, OnDestroy, OnInit, ReflectiveInjector, Injector, ComponentFactoryResolver
+} from '@angular/core';
+import {PopupService, PopupEvent} from '../popup.service';
+import {ViewContainerRef} from '@angular/core';
+import {Subscription} from 'rxjs/Subscription';
+import { DetailviewComponent } from '../detailview/detailview.component';
+
 
 @Component({
-  selector: 'app-popup',
-  templateUrl: './popup.component.html',
-  styleUrls: ['./popup.component.css']
+  selector: 'popup-overflow',
+  templateUrl: './popup.component.html'
+  
 })
-export class PopupComponent{
-  @ViewChild('popup1') popup1: Popup;
-  constructor(){ }
-  ClickButton(){
-  this.popup1.options = {
-    header: "Your custom header",
-    color: "#5cb85c", // red, blue.... 
-    widthProsentage: 40, // The with of the popou measured by browser width 
-    animationDuration: 1, // in seconds, 0 = no animation 
-    showButtons: true, // You can hide this in case you want to use custom buttons 
-    confirmBtnContent: "OK", // The text on your confirm button 
-    cancleBtnContent: "Cancel", // the text on your cancel button 
-    confirmBtnClass: "btn btn-default", // your class for styling the confirm button 
-    cancleBtnClass: "btn btn-default", // you class for styling the cancel button 
-    animation: "fadeInDown" // 'fadeInLeft', 'fadeInRight', 'fadeInUp', 'bounceIn','bounceInDown' 
-   };
- 
-    this.popup1.show(this.popup1.options);
+export class Popup implements OnDestroy, OnInit {
+  loading: false;
+  subscribers:any [];
+  constructor(private popupService: PopupService,
+              private injector: Injector,
+              private componentFactoryResolver: ComponentFactoryResolver,
+              private viewContainerRef: ViewContainerRef) {
+  }
+
+
+  ngOnInit() {
+    this.subscribers.push(
+      this.popupService.subscribe((data) => {
+        if (!!data && data.operation === PopupEvent.OPEN) {
+          this.open(data);
+        } else if (data &&
+          (
+            data.operation === PopupEvent.CLOSE ||
+            data.operation === PopupEvent.DESTROY
+          )
+        ) {
+          this.close();
+        }
+      })
+    );
+  }
+
+  ngOnDestroy() {
+    if (this.subscribers) {
+      this.subscribers.forEach(item => item.unsubscribe());
+      this.subscribers = null;
+    }
+  }
+
+  private open(data) {
+    //this.loading = true;
+    let providers = data.providers || [];
+    let injector = ReflectiveInjector.resolveAndCreate(providers, this.injector);
+    let factory = this.componentFactoryResolver.resolveComponentFactory(data.component);
+  
+    setTimeout(() => {
+      this.loading = false;
+      this.viewContainerRef.createComponent(factory, 0, injector);
+    }, 1000);
+  }
+
+  private close() {
+    this.viewContainerRef.detach(0);
   }
 }
-
-

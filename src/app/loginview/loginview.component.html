@@ -1,5 +1,4 @@
 <div class="image" [ngStyle]="{'background-image':'url(' + object.link + ')'}">
-        <h1>{{title}}</h1>
       <div class="login">
        <form (ngSubmit)="formSubmit()">
         <input type="text" id="uname" class="form-control" [(ngModel)]="data.username" [ngModelOptions]="{standalone: true}"><br>

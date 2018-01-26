@@ -19,6 +19,7 @@ import { PeopleService } from './people.service';
 import { GlobalVariableService } from './global.service';
 import { DataService } from './data.service';
 import { ApiService } from './data.service';
+import { PopupService } from './popup.service';
 
 import { PersonDetailsComponent } from './person-details/person-details.component';
 
@@ -47,6 +48,8 @@ import { CraftitemsComponent } from './craftitems/craftitems.component';
 
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
+import { DetailviewComponent } from './detailview/detailview.component';
+import { Popup } from './popup/popup.component';
 
 
 
@@ -86,10 +89,12 @@ import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
     SideBarComponent,
     CraftviewComponent,
     ShopmenuComponent,
-    ModalDialogComponent
+    ModalDialogComponent,
+    DetailviewComponent,
+    Popup
   ],
-  providers: [PeopleService,GlobalVariableService,DataService,ApiService],
+  providers: [PeopleService,GlobalVariableService,DataService,ApiService,PopupService],
   bootstrap: [AppComponent],
-  entryComponents: [AppComponent, CraftitemsComponent]
+  entryComponents: [AppComponent, CraftitemsComponent,DetailviewComponent]
 })
 export class AppModule { }

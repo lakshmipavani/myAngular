@@ -7,7 +7,7 @@ import { RouterModule, Router}  from '@angular/router';
   styleUrls: ['loginview.component.css']
 })
 export class LoginviewComponent implements OnInit {
-  title = 'Login View';
+  title = 'samplelog';
   object = {
     link: "../../assets/web-page.jpg"
   }
