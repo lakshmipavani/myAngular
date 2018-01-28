@@ -7,7 +7,6 @@ import { ModalDialogComponent } from '../modal-dialog/modal-dialog.component';
 import {DataService} from '../data.service';
 import {ApiService} from '../data.service';
 import { IPosts } from '../person';
-import { Popup } from '../popup/popup.component';
 import { PopupService } from '../popup.service';
 import { DetailviewComponent } from '../detailview/detailview.component';
 
@@ -53,11 +52,10 @@ export class CraftitemsComponent implements OnInit {
          console.log(this.imagesObjectValues);
      }
   }
-   openPopup() {
-   this.popupService.open(DetailviewComponent, [
-     {
-       provide: "sample", useValue: "ejhferkjfberkhb"
-     }
-   ]);
- }
+  editPopupClose($event){
+        this._itemHovered=false;   
+  }
+  showDialogValue(event){
+    this.showDialog=false;
+  }
 }

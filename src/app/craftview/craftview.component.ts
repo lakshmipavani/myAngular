@@ -18,6 +18,9 @@ export class CraftviewComponent implements OnInit {
   goToShopMenu(){
     this.globalVariableService.showShopMenu();
   }
+  goToProductMenu(){
+    this.globalVariableService.showProductMenu();
+  }
   ngOnInit() {
   }
 }

@@ -1,3 +1,9 @@
+.showCraftView{
+   width:100%;height:100%;background-color: #FFFEF6;
+}
+.hideCraftView{
+    display:none;
+}
 .homeButton{
 	width: 7%;
     //height: 10%;

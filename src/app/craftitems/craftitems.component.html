@@ -10,13 +10,20 @@
      <div *ngFor="let item of imagesObject">
             <div class="{{item.name}}" id="{{item.name}}" (mouseenter)='hoverView($event)'>
           <div  *ngIf="_itemHovered" class="hoverViewContainer">
-             <button (click)="openPopup()" class="btn btn-primary btn-lg">More</button>
+             <button (click)="showDialog = !showDialog" class="btn">MoreInfo</button>
          </div>
       </div>
     </div>
+    <button (click)="showDialog = !showDialog" class="btn">MoreInfo</button>
   </div>
 </div>
-<popup-overflow></popup-overflow>
+<app-dialog [visible]="showDialog">
+    <h1 *ngIf="currentObject">{{currentObject}}</h1>
+    <div *ngIf="currentObject">
+      <img src="{{imagesObjectValues[currentObject]}}">
+    </div>
+    <button (click)="showDialog = !showDialog" class="btn">Close</button>
+</app-dialog>
 
 <!-- <div [@dialog] *ngIf="showDialog" class="dialog"> 
 <div *ngIf="showDialog">

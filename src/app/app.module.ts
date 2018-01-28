@@ -3,7 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }      from '@angular/http';
-import { PopoverModule } from "ng2-popover";
+
 
 import { ChartModule } from 'angular2-highcharts';
 import { Ng2DragDropModule } from '../../node_modules/ng2-drag-drop';
@@ -20,6 +20,9 @@ import { GlobalVariableService } from './global.service';
 import { DataService } from './data.service';
 import { ApiService } from './data.service';
 import { PopupService } from './popup.service';
+
+import { CartService } from './services/cart.service';
+import { ProductsService } from './services/products.service';
 
 import { PersonDetailsComponent } from './person-details/person-details.component';
 
@@ -49,8 +52,14 @@ import { CraftitemsComponent } from './craftitems/craftitems.component';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 import { DetailviewComponent } from './detailview/detailview.component';
-import { Popup } from './popup/popup.component';
+import { ProductComponent } from './products/components/product/product.component';
+import { ShoppingCartComponent } from './products/components/shopping-cart/shopping-cart.component';
+import { ProductsComponent} from './products/products.component';
 
+import { ProductListComponent } from './products/components/product-list/product-list.component';
+import { ProductFilterComponent } from './products/components/product-filter/product-filter.component';
+import { ProductDetailsComponent } from './products/components/product-details/product-details.component';
+import { ColorListComponent } from './products/components/color-list/color-list.component';
 
 
 @NgModule({
@@ -63,11 +72,15 @@ import { Popup } from './popup/popup.component';
     //ChartModule.forRoot(require('highcharts')),
     Ng2DragDropModule.forRoot(),
     AppRoutingModule,//new routing module
-    Angular2FontawesomeModule,
-    PopoverModule
+    Angular2FontawesomeModule
   ],
   declarations: [
     AppComponent,
+    ProductListComponent,
+    ProductComponent,
+    ProductFilterComponent,
+    ProductDetailsComponent,
+    ColorListComponent,
     CraftitemsComponent,
     PeopleListComponent,
     PersonDetailsComponent,
@@ -91,9 +104,10 @@ import { Popup } from './popup/popup.component';
     ShopmenuComponent,
     ModalDialogComponent,
     DetailviewComponent,
-    Popup
+    ProductsComponent,
+    ShoppingCartComponent
   ],
-  providers: [PeopleService,GlobalVariableService,DataService,ApiService,PopupService],
+  providers: [PeopleService,GlobalVariableService,DataService,ApiService,PopupService,CartService,ProductsService],
   bootstrap: [AppComponent],
   entryComponents: [AppComponent, CraftitemsComponent,DetailviewComponent]
 })

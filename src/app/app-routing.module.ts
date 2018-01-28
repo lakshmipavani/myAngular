@@ -14,7 +14,11 @@ import { ConverterComponent } from './converter/converter.component';
 import { SideBarComponent } from './sidebar/sidebar.component';
 import { CraftviewComponent } from './craftview/craftview.component';
 import { ShopmenuComponent } from './shopmenu/shopmenu.component';
-
+import { ProductComponent } from './products/components/product/product.component';
+import { ProductsModule} from './products/products.module';
+import { ProductsComponent} from './products/products.component';
+import {ProductDetailsComponent} from './products/components/product-details/product-details.component';
+import {ShoppingCartComponent} from './products/components/shopping-cart/shopping-cart.component';
 
 
 import { LoginviewComponent } from './loginview/loginview.component';
@@ -68,12 +72,23 @@ import { DashboardLayoutComponentComponent } from './dashboard-layout-component/
           path:'shopMenu',component:ShopmenuComponent
           },
           {
+          path:'productMenu',component:ProductsComponent
+          },
+          {
           path: 'craftPage',
           component: CraftviewComponent,
               children:[
                  {
-                 path:'shopMenu',component:ShopmenuComponent
-                 }
+                 path:'productMenu',component:ProductsComponent
+                 },
+                 {
+                    path: 'details/:id',
+                    component: ProductDetailsComponent
+                  },
+                  {
+                    path: 'cart',
+                    component: ShoppingCartComponent
+                  }
                ]
           },
           {
@@ -112,7 +127,7 @@ import { DashboardLayoutComponentComponent } from './dashboard-layout-component/
             component: CraftviewComponent,
             children:[
                {
-               path:'shopMenu',component:ShopmenuComponent
+               path:'productMenu',component:ProductsComponent
                }
              ]
             }

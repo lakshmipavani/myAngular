@@ -5,11 +5,13 @@ export class GlobalVariableService{
      visible:boolean;
      craftView:boolean;
      shopMenu:boolean;
+     productMenu:boolean;
     
     constructor(){
       this.visible = true;
       this.craftView = false;
       this.shopMenu = false;
+      this.productMenu = false;
 
     }
     
@@ -33,11 +35,15 @@ export class GlobalVariableService{
 
   hideShopMenu(){
       this.shopMenu = false;
-      this.craftView = true;
+      //this.craftView = true;
       this.visible = false;
   }
   showShopMenu(){
       this.shopMenu = true;
+      this.craftView = false;
+  }
+  showProductMenu(){
+      this.productMenu = true;
       this.craftView = false;
   }
 }
