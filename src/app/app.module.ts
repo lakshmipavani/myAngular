@@ -62,6 +62,7 @@ import { ProductDetailsComponent } from './products/components/product-details/p
 import { ColorListComponent } from './products/components/color-list/color-list.component';
 
 
+
 @NgModule({
   imports: [
     BrowserModule,

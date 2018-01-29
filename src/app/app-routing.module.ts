@@ -75,11 +75,21 @@ import { DashboardLayoutComponentComponent } from './dashboard-layout-component/
           path:'productMenu',component:ProductsComponent
           },
           {
+                    path: 'details/:id',
+                    component: ProductDetailsComponent
+                  },
+          {
           path: 'craftPage',
           component: CraftviewComponent,
               children:[
                  {
-                 path:'productMenu',component:ProductsComponent
+                 path:'products',component:ProductsComponent,
+                 children:[
+                    {
+                    path: 'details/:id',
+                    component: ProductDetailsComponent
+                  }
+                 ]
                  },
                  {
                     path: 'details/:id',

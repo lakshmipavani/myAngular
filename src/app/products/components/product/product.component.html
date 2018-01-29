@@ -2,7 +2,7 @@
   <i class="fa fa-picture-o" [ngStyle]="{ 'font-size': size+'em'}"></i>
 </div>
 <div class="item-name">
-  <a routerLink="/products/details/{{id}}">{{name}}</a>
+  <a [routerLink]="['details']">{{name}}</a>
 </div>
 
 <div class="product-price">

@@ -20,7 +20,7 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      const id = +params['id'];
+      const id = +params['id']||0;
       this.productsService
         .getProduct(id)
         .subscribe(_ => this.product = _)
