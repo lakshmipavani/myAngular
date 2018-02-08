@@ -72,7 +72,13 @@ import { DashboardLayoutComponentComponent } from './dashboard-layout-component/
           path:'shopMenu',component:ShopmenuComponent
           },
           {
-          path:'productMenu',component:ProductsComponent
+          path:'products',component:ProductsComponent,
+          children:[
+             {
+               path: 'details/:id',
+               component: ProductDetailsComponent
+             }
+          ]
           },
           {
                     path: 'details/:id',
@@ -86,6 +92,9 @@ import { DashboardLayoutComponentComponent } from './dashboard-layout-component/
                  path:'products',component:ProductsComponent,
                  children:[
                     {
+                    path: 'product',
+                    component: ProductComponent
+                    },{
                     path: 'details/:id',
                     component: ProductDetailsComponent
                   }
@@ -98,6 +107,15 @@ import { DashboardLayoutComponentComponent } from './dashboard-layout-component/
                   {
                     path: 'cart',
                     component: ShoppingCartComponent
+                  },
+                   {
+                    path: 'product',
+                    component: ProductComponent,children:[
+                      {
+                        path: 'details/:id',
+                        component: ProductDetailsComponent
+                      }
+                    ]
                   }
                ]
           },
@@ -137,7 +155,7 @@ import { DashboardLayoutComponentComponent } from './dashboard-layout-component/
             component: CraftviewComponent,
             children:[
                {
-               path:'productMenu',component:ProductsComponent
+               path:'products',component:ProductsComponent
                }
              ]
             }

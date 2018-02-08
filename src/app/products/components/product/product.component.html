@@ -2,9 +2,30 @@
   <i class="fa fa-picture-o" [ngStyle]="{ 'font-size': size+'em'}"></i>
 </div>
 <div class="item-name">
-  <a [routerLink]="['details']">{{name}}</a>
+ <!--  <a routerLink="details/:{{id}}">{{name}}</a> -->
+    <div class="product-price">
+	  {{getCurrency()}}{{price}}
+	</div>
+  <button style="padding: 0px;" (click)="showDialog = !showDialog" class="btn">MoreInfo</button>
 </div>
 
-<div class="product-price">
-  {{getCurrency()}}{{price}}
-</div>
+
+<app-dialog [visible]="showDialog">
+    <div class="product-details-popup"><!--complete popup -->
+        <div class="product-details-popup-image-View"><!--only image div-->
+		    <div class="product-details-popup-product-image">
+			  <i class="fa fa-picture-o" [ngStyle]="{ 'font-size': size+'em'}"></i>
+			</div>
+		</div>
+	    <div class="product-details-popup-detail-view"><!--only details view-->
+	       <b style="color: brown;font-size: 20px;">{{name}}</b>
+	       <p style="margin: 3px;">{{name}}</p>
+	       <p style="margin: 3px;">${{price}}</p>
+	       <a class="seemoredetails">see more details</a>
+	    </div>
+	    <div class="product-details-popup-description-view">
+	    	<p>It's time to update your little ones wardrobe with something stylish this season. Specially designed for a perfect fit, this trendy outfit provides utmost comfort which will keep your baby looking super adorable.</p>
+
+	    </div>
+    </div>
+</app-dialog>
