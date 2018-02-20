@@ -1,13 +1,15 @@
+<agm-map [latitude]="lat" [longitude]="lng">
+	<!-- <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+	<agm-marker [latitude]="lat1" [longitude]="lng1"></agm-marker>
+	<agm-marker [latitude]="lat2" [longitude]="lng2"></agm-marker>
+	<agm-marker [latitude]="lat3" [longitude]="lng3"></agm-marker>
+	<agm-marker [latitude]="lat4" [longitude]="lng4"></agm-marker> -->
+	
+	<div *ngFor="let id of _locationDetails">
+		<agm-marker [latitude]=id.lat [longitude]=id.lng [iconUrl]=id.iconUrl></agm-marker>
+		<agm-info-window>
+          <strong>InfoWindow content</strong>
+        </agm-info-window>
+	</div>
 
-<div class="mainView">
-    <div class="container">
-      <h1>Angular 2 + Google Maps Places Autocomplete</h1>
-      <div class="form-group">
-        <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
-      </div>
-      <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
-        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
-      </agm-map>
-    </div>
-
-</div>
+</agm-map>
