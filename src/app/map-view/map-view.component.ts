@@ -22,13 +22,7 @@ export class MapViewComponent implements OnInit {
   
      ngOnInit() {}
 
-     mapClicked($event: MouseEvent) {
-	     this.locationService._LocationDetails.push({
-	      lat: $event.coords.lat,
-	      lng: $event.coords.lng,
-	      iconUrl:'/assets/wastebin-red.png'
-	     });
-     }
+    
 
 }
 
