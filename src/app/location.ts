@@ -3,3 +3,9 @@ export interface LocationDetails {
 	long:number;
 	iconUrl?: string;
 }
+export interface marker {
+	lat: number;
+	lng: number;
+	label?: string;
+	draggable: boolean;
+}

@@ -1,4 +1,6 @@
-<agm-map [latitude]="lat" [longitude]="lng">
+<agm-map [zoom]="zoom"
+  [disableDefaultUI]="false"
+  [zoomControl]="false"[latitude]="latitude" [longitude]="longitude" (mapClick)="mapClicked($event)">
 	<!-- <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 	<agm-marker [latitude]="lat1" [longitude]="lng1"></agm-marker>
 	<agm-marker [latitude]="lat2" [longitude]="lng2"></agm-marker>
@@ -6,10 +8,18 @@
 	<agm-marker [latitude]="lat4" [longitude]="lng4"></agm-marker> -->
 	
 	<div *ngFor="let id of _locationDetails">
-		<agm-marker [latitude]=id.lat [longitude]=id.lng [iconUrl]=id.iconUrl></agm-marker>
-		<agm-info-window>
-          <strong>InfoWindow content</strong>
-        </agm-info-window>
+		<agm-marker [latitude]=id.lat [longitude]=id.lng [iconUrl]=id.iconUrl>
+			<agm-info-window>
+		      <strong>InfoWindow content</strong>
+		    </agm-info-window>
+		</agm-marker>
+		<agm-circle [latitude]="id.lat + 0.3" [longitude]="id.lng" 
+	      [radius]="5000"
+	      [fillColor]="'red'"
+	      [circleDraggable]="true"
+	      [editable]="true">
+        </agm-circle>
+
 	</div>
 
 </agm-map>

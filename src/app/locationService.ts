@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class LocationService {
-  _LocationDetails<LocationDetails>=[
+  _LocationDetails=[
               {
                 lat:51.678418,
                 lng:7.809007,

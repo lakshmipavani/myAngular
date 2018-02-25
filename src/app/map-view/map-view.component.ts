@@ -11,13 +11,24 @@ import { LocationService } from '../locationService';
 
 export class MapViewComponent implements OnInit {
 
-    _locationDetails:LocationDetails;
+    _locationDetails;
+    zoom: number = 15;
+    latitude: number = 51.673858;
+    longitude: number = 7.815982;
 
      constructor(private locationService:LocationService){
          this._locationDetails = locationService.getLocations();
      }
   
- ngOnInit() {}
+     ngOnInit() {}
+
+     mapClicked($event: MouseEvent) {
+	     this.locationService._LocationDetails.push({
+	      lat: $event.coords.lat,
+	      lng: $event.coords.lng,
+	      iconUrl:'/assets/wastebin-red.png'
+	     });
+     }
 
 }
 

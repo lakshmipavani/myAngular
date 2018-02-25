@@ -4,7 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MapViewComponent } from './map-view/map-view.component';
-
+import { GoggleviewComponent } from './goggleview/goggleview.component';
+import { AppInfoWindowComponent } from './goggleview/goggleview.component';
 
 
   // Route config let's you map routes to components
@@ -21,6 +22,9 @@ import { MapViewComponent } from './map-view/map-view.component';
       },
       {
             path:'mapsView',component:MapViewComponent
+      },
+      {
+            path:'googleView',component:GoggleviewComponent
       }
    ];
   

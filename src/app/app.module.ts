@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MapViewComponent } from './map-view/map-view.component';
 
 import { LocationService } from './locationService';
+import { GoggleviewComponent } from './goggleview/goggleview.component';
+import { AppInfoWindowComponent } from './goggleview/goggleview.component';
 
 
 
@@ -17,16 +19,19 @@ import { LocationService } from './locationService';
   declarations: [
     AppComponent,
     NavbarComponent,
-    MapViewComponent
+    MapViewComponent,
+    GoggleviewComponent,
+    AppInfoWindowComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCTK_1o0siFwbDcgKDuClDaXhDYap0h1So'
+      apiKey: 'AIzaSyBlOmZdUxm037dt6VmBtVbkSHA4pilIlUE'
     })
   ],
   providers: [LocationService],
+  entryComponents: [AppInfoWindowComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
