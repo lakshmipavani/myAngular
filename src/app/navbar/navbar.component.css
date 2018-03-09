@@ -3,6 +3,7 @@
 </p>
 .mainNav {
   background: #000;
+  height: 7%;
 }
 
 ul {
@@ -10,7 +11,7 @@ ul {
   margin: 0;
   overflow: hidden;
   background-color: #333;
-  padding: 10px;
+  padding: 0;
   font-size: larger;
 }
 
@@ -22,7 +23,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 18px 16px;
   text-decoration: none;
 }
 
