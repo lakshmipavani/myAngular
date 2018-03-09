@@ -11,11 +11,7 @@ import { AppInfoWindowComponent } from './goggleview/goggleview.component';
   // Route config let's you map routes to components
   const routes: Routes = [
       {
-          path: '',
-          component: AppComponent
-      },
-      {
-        path: 'navbar',
+        path: '',
         component: NavbarComponent,
         children: [
           ]

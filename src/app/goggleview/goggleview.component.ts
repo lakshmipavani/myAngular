@@ -35,7 +35,8 @@ export class AppInfoWindowComponent {
 @Component({
   selector: 'smaple-app',
   template: `
-    <div id="gmap" style="height:90%;"></div>
+    <app-navbar></app-navbar>
+    <div id="gmap" style="height:93%;"></div>
   `
 })
 export class GoggleviewComponent {
