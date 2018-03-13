@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 
@@ -10,8 +11,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { MapViewComponent } from './map-view/map-view.component';
 
 import { LocationService } from './locationService';
+import { GlobalVariableService } from './global.service';
+import { CartService } from './cart.service';
+import { ProductsService } from './products.service';
+
+
 import { GoggleviewComponent } from './goggleview/goggleview.component';
 import { AppInfoWindowComponent } from './goggleview/goggleview.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CraftviewComponent } from './craftview/craftview.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductComponent } from './product/product.component';
+import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 
 
 
@@ -21,17 +33,24 @@ import { AppInfoWindowComponent } from './goggleview/goggleview.component';
     NavbarComponent,
     MapViewComponent,
     GoggleviewComponent,
-    AppInfoWindowComponent
+    AppInfoWindowComponent,
+    DashboardComponent,
+    CraftviewComponent,
+    ProductsComponent,
+    ProductListComponent,
+    ProductComponent,
+    ModalDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBlOmZdUxm037dt6VmBtVbkSHA4pilIlUE'
     })
   ],
-  providers: [LocationService],
+  providers: [LocationService,GlobalVariableService,ProductsService,CartService],
   entryComponents: [AppInfoWindowComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
