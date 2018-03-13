@@ -8,7 +8,7 @@ import { ModalDialogComponent } from '../modal-dialog/modal-dialog.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductComponent {
-
+  showDialog;
   @Input() public id: number;
   @Input() public name: string;
   @Input() public price: number;
