@@ -10,29 +10,36 @@ import { AppInfoWindowComponent } from './goggleview/goggleview.component';
 import { CraftviewComponent } from './craftview/craftview.component';
 import { ProductsComponent } from './products/products.component';
 
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
+
 
   // Route config let's you map routes to components
   const routes: Routes = [
       {
-        path: '',
+        path:'',component:LoginComponent
+      },
+      {
+        path: 'navBar',
+        canActivate:[AuthGuard],
         component: NavbarComponent,
         children: [
           ]
       },
       {
-            path:'dashboard',component:DashboardComponent
+            path:'dashboard',canActivate:[AuthGuard],component:DashboardComponent
       },
       {
-            path:'mapsView',component:MapViewComponent
+            path:'mapsView',canActivate:[AuthGuard],component:MapViewComponent
       },
       {
-            path:'googleView',component:GoggleviewComponent
+            path:'googleView',canActivate:[AuthGuard],component:GoggleviewComponent
       },
       {
-            path:'craftView',component:CraftviewComponent
+            path:'craftView',canActivate:[AuthGuard],component:CraftviewComponent
       },
       {
-            path:'products',component:ProductsComponent
+            path:'products',canActivate:[AuthGuard],component:ProductsComponent
       }
    ];
   

@@ -1,13 +1,5 @@
 //our root app component
-import {
-  Component, 
-  NgModule,
-  ApplicationRef, 
-  ComponentFactoryResolver, 
-  ComponentRef,
-  Injector,
-  NgZone,
-  EventEmitter
+import { Component, NgModule,ApplicationRef, ComponentFactoryResolver, ComponentRef,Injector,NgZone,EventEmitter
 } from '@angular/core'
 
 

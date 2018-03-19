@@ -14,6 +14,8 @@ import { LocationService } from './locationService';
 import { GlobalVariableService } from './global.service';
 import { CartService } from './cart.service';
 import { ProductsService } from './products.service';
+import { UserService } from './user.service';
+import { AuthGuard } from './auth.guard';
 
 
 import { GoggleviewComponent } from './goggleview/goggleview.component';
@@ -24,6 +26,8 @@ import { ProductsComponent } from './products/products.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product/product.component';
 import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -39,7 +43,9 @@ import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
     ProductsComponent,
     ProductListComponent,
     ProductComponent,
-    ModalDialogComponent
+    ModalDialogComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +55,7 @@ import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
       apiKey: 'AIzaSyBlOmZdUxm037dt6VmBtVbkSHA4pilIlUE'
     })
   ],
-  providers: [LocationService,GlobalVariableService,ProductsService,CartService],
+  providers: [LocationService,GlobalVariableService,ProductsService,CartService,UserService,AuthGuard],
   entryComponents: [AppInfoWindowComponent],
   bootstrap: [AppComponent]
 })
