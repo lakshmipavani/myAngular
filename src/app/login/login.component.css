@@ -35,9 +35,11 @@ div.input{
     padding: 30px;
     text-align: center;
 }
-
+input:focus { 
+    outline:none;
+}
 .formView{
-   padding-top:10%;
+   /*padding-top:10%;*/
 }
 	.loginBox{
 	   display: block;
@@ -116,6 +118,7 @@ div.input{
     padding-bottom: 10px;
     font-size: 14px;
     color: white;
+    cursor:pointer;
     }
     .poweredByLogo{
     text-align: center;

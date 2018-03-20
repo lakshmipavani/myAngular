@@ -23,21 +23,23 @@
    	  </div>
    	  <div class="title"></div>
    	  <div class="loginFields">
-   	    <div class="loginItem">
-             <i class="fa fa-user" style="padding:10px;margin-left: 5px;"></i>
-             <input type="text" placeholder="User Name" style="border:none;font-size: 15px;margin-left: 12px;">
-   	    </div>
-	   	<div class="loginItem">
-             <i class="fa fa-user" style="padding:10px;margin-left: 5px;"></i>
-             <input type="password" placeholder="Password" style="border:none;font-size: 15px;margin-left: 12px;">
-   	    </div>
-	   	<div class="loginSubmit">
-	   	   <input type="submit" class="submit" value="Sign In">
-	   	</div>
+   	    <form (submit)="loginUser($event)">
+	   	    <div class="loginItem">
+	             <i class="fa fa-user" style="padding:10px;margin-left: 5px;opacity: 0.5;"></i>
+	             <input type="text" placeholder="User Name" style="border:none;font-size: 15px;margin-left: 12px;">
+	   	    </div>
+		   	<div class="loginItem">
+	             <i class="fa fa-user" style="padding:10px;margin-left: 5px;opacity: 0.5;"></i>
+	             <input type="password" placeholder="Password" style="border:none;font-size: 15px;margin-left: 12px;">
+	   	    </div>
+		   	<div class="loginSubmit">
+		   	   <input type="submit" class="submit" value="Sign In">
+		   	</div>
+	    </form>
    	  </div>
    	  <div class="forgotPasswordFields">
            <div class="forgotPassword">Forgot your password?</div>
-           <div class="newCustomer">New Customer Registration</div>	
+           <div class="newCustomer" (click)="register($event)">New Customer Registration</div>	
    	  </div>
    	  <div class="poweredByLogo"></div>
    </div>

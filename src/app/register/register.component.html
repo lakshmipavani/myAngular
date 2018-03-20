@@ -1,3 +1,51 @@
-<p>
-  register works!
-</p>
+<!-- <div style="border: 1px inset;text-align: center;padding: 5% 8% 8% 8%;">
+	<div class="welcomeView">
+		Welcome to my page!
+	</div>
+	<form class="formView" (submit)="loginUser($event)">
+		<div class="input">
+		   <label>username</label>
+		   <input type="text" placeholder="username">
+		</div>
+		<div class="input">
+		   <label>password</label>
+		   <input type="password" placeholder="password">
+		</div>
+		<div class="input">
+		   <input type="submit" value="login">
+		</div>
+	</form>
+</div> -->
+<div class="loginView">
+   <div class="loginBox">
+   	  <div class="welcomeMessage">
+   	  	Register
+   	  </div>
+   	  <div class="loginFields">
+	   	    <div class="loginItem">
+	             <input type="text" placeholder="Display Name" style="border:none;font-size: 15px;margin-left: 16px;padding:9px;">
+	   	    </div>
+		   	<div class="loginItem">
+	             <input type="password" placeholder="Client Name" style="border:none;font-size: 15px;margin-left: 16px;padding:9px;">
+	   	    </div>
+	   	    <div class="loginItem">
+	             <input type="password" placeholder="Client Id" style="border:none;font-size: 15px;margin-left: 12px;padding:9px;">
+	   	    </div>
+	   	    <div class="loginItem">
+	             <input type="password" placeholder="Client Secret Code" style="border:none;font-size: 15px;margin-left: 16px;padding:9px;">
+	   	    </div>
+	   	    <div class="loginItem">
+	             <input type="password" placeholder="User Name" style="border:none;font-size: 15px;margin-left: 16px;padding:9px;">
+	   	    </div>
+	   	    <div class="loginItem">
+	             <input type="password" placeholder="Password" style="border:none;font-size: 15px;margin-left: 16px;padding:9px;">
+	   	    </div>
+		   	<div class="loginSubmit">
+		   	   <input type="submit" class="submit" value="Register">
+		   	</div>
+   	  </div>
+   	  <div class="forgotPasswordFields">
+           <div class="newCustomer" (click)="backLogin($event)">Back To Login</div>	
+   	  </div>
+   </div>
+</div>

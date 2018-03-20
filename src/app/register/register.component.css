@@ -1,0 +1,132 @@
+/*:host{
+   flex-grow: 1;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}*/
+
+div.input{
+	position:relative;
+}
+
+div.input.label{
+	position:absolute;
+	top:0;
+	transform: translateY(-50%);
+	left:10px;
+	background:white;
+	padding: 5px 2px;
+}
+
+div.input input{
+	padding: 10px 20px;
+	font-size: 25px;
+	outline:0;
+}
+
+div.input{
+	margin-top: 20px;
+}
+
+.welcomeView{
+  	border-bottom: 5px inset;
+    font-size: 35px;
+    padding: 30px;
+    text-align: center;
+}
+input:focus { 
+    outline:none;
+}
+.formView{
+   /*padding-top:10%;*/
+}
+	.loginBox{
+	   display: block;
+	    margin: 0px auto;
+	    width: 383px;
+	    background-color: #141D24;
+	    padding: 10px;
+	    border-radius: 3px;
+	    opacity: 0.9;	
+	}
+    .loginView{
+     height:100%; 
+     background-size:cover; width:auto;
+     background-image:url('../../assets/dubai-login-bg.jpg');
+     background-position:50% 50%;
+     align-items: center;
+     display: flex;
+   }
+   .welcomeMessage{
+    color: #d7d6d8;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-bottom: 5%;
+    letter-spacing: 5px;
+    padding-top: 2%;
+    font-family: "CiscoSansTTExtraLight";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    .title{
+    text-align: center;
+    color: white;
+    background-image: url(../../assets/cisco_logo.png);
+    background-repeat: no-repeat;
+    height: 50px;
+    margin-left: 10%;
+    background-size: 17% 60%;
+    background-position: 40% 0%;
+    }
+    .loginFields{
+    padding: 10px 38px;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    }
+    .loginItem{
+    background: white;
+    border-radius: 4px;
+    height: 37px;
+    margin-bottom: 8px;
+    }
+    .loginSubmit{
+    height: 40px;
+    margin-top:20px;
+    }
+
+    .submit{
+    height: 100%;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+    background: #1EA6FD;
+    }
+    .forgotPassword{
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    }
+    .newCustomer{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: white;
+    }
+    .poweredByLogo{
+    text-align: center;
+    color: white;
+    background-image: url(../../assets/powered_by_cisco.png);
+    background-repeat: no-repeat;
+    height: 50px;
+    margin-left: 10%;
+    padding-top:5px;
+    background-size: 15% 60%;
+    background-position: 40% 0%;
+    }

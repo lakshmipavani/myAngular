@@ -11,6 +11,7 @@ import { CraftviewComponent } from './craftview/craftview.component';
 import { ProductsComponent } from './products/products.component';
 
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './auth.guard';
 
 
@@ -18,6 +19,9 @@ import { AuthGuard } from './auth.guard';
   const routes: Routes = [
       {
         path:'',component:LoginComponent
+      },
+      {
+        path:'newCustomerRegistration',component:RegisterComponent
       },
       {
         path: 'navBar',

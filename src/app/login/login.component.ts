@@ -27,5 +27,8 @@ export class LoginComponent implements OnInit {
         console.log('error');
      }
   }
+  register(e){
+     this.router.navigate(['/newCustomerRegistration']);
+  }
 
 }

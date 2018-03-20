@@ -28,6 +28,7 @@ import { ProductComponent } from './product/product.component';
 import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { MainViewComponent } from './main-view/main-view.component';
 
 
 
@@ -45,7 +46,8 @@ import { RegisterComponent } from './register/register.component';
     ProductComponent,
     ModalDialogComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    MainViewComponent
   ],
   imports: [
     BrowserModule,
