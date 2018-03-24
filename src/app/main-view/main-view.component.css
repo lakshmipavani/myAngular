@@ -1,0 +1,142 @@
+.mainToolbar{
+    color: #6cc6fe;
+    border-bottom: solid 1px #315368;
+    background: #0f161c;
+    font-family: ciscosansttregular;
+    text-transform: capitalize;
+    font-size: 0.9em;
+    width: 100%;
+    display: block
+}
+.toolbarContainer{
+    padding: 15px;
+    height: 32px;
+}
+.regionBox{
+
+}
+.region-title{
+
+}
+.locationContainer{
+
+}
+.dateTimeFields{
+  padding: 10px;
+  text-transform: uppercase;
+}
+.dateTimeFields .curTime{
+  margin-right: 10px;
+  font-size: 14px;
+  width: auto;
+  height: 19px;
+  font-weight: bold;
+  font-family: ciscosansttbold;
+}
+.dateTimeFields .curDate{
+    margin-top: 1px;
+    width: 100px;
+    height: 16px;
+    color: #6cc6fe;
+    opacity: 0.46;
+    font-family: ciscosansttregular;
+    font-size: 11px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+.toolbarRightSectionContainer{
+   float: right;
+   margin-top: 10px !important;
+}
+.languagePicker{
+    border-right: 1px solid rgba(49, 83, 104, 0.5);
+    padding-right: 8px !important;
+    display: -webkit-inline-box !important;
+}
+.languageIcon{
+    width: 16px;
+    height: 16px;
+    padding: 1px;
+    margin-top: 2px;
+    background-repeat: no-repeat;
+    background-image: url(/assets/lang.png);
+}
+.languageText{
+    font-size: 13px;
+    padding: 4px;
+    color: #6cc6fe;
+    font-family: ciscosansttregular;
+}
+.languageInputIcon{
+    background-image: url(/assets/arrow-down.png);
+    width: 10px;
+    height: 10px;
+    margin-top: 7px;
+    background-position: 50% 50%;
+    padding: 2px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.notificationContainer{
+    fill: #6CC6FE;
+}
+.settingsContainer{
+    fill: #6CC6FE;
+}
+.helpDoc{
+    fill: #6CC6FE;
+}
+.toolbarAppLogo{
+    width: 150px;
+    height: 24px;
+    cursor: pointer;
+    background-image: url(/assets/ckc.svg) !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2px;
+    margin-top: 3px;
+}
+.toolbarMenuSectionContainer{
+    clear: both;
+}
+.toolbar-menu-section {
+    //width: 100%;
+    margin-bottom: 0;
+    color: #6cc6fe;
+    padding-left: 2px;
+}
+.toolbar-menu-item {
+    display: inline-block;
+    width: 12%;
+    margin: 4px 2.5px 0px 2.5px;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 15px;
+    background: rgba(74, 128, 162, 0.24);
+}
+.toolbar-menu-item:hover, .toolbar-menu-item-active {
+    color: #FFFFFF;
+    background-color: #315368;
+    transition: color 0.1s ease;
+}
+ul{
+	margin-top:0;
+}
+.margin-8{
+	margin-left: 8px;
+    margin-right: 8px;
+}
+.left{
+	float:left;
+}
+a{
+	color: #337ab7;
+    text-decoration: none;
+	background-color: transparent;
+}
