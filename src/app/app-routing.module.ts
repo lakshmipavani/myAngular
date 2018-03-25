@@ -21,7 +21,7 @@ import { AuthGuard } from './auth.guard';
   // Route config let's you map routes to components
   const routes: Routes = [
       {
-        path:'',component:LoginComponent
+        path:'login',component:LoginComponent
       },
       {
         path:'newCustomerRegistration',component:RegisterComponent
@@ -37,7 +37,7 @@ import { AuthGuard } from './auth.guard';
             path:'dashboard',canActivate:[AuthGuard],component:DashboardComponent
       },
       {
-            path:'mainView',canActivate:[AuthGuard],component:MainViewComponent
+            path:'',component:MainViewComponent
       },
       {
             path:'mapsView',canActivate:[AuthGuard],component:MapViewComponent

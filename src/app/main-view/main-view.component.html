@@ -19,13 +19,36 @@
 		  <div class="languageInputIcon"></div>
 		</div>
 		<div class="notificationContainer margin-8 left">
-			<svg-icon src="/assets/notifications_icon.svg" style="fill: #6CC6FE;"></svg-icon>
+			<svg-icon src="/assets/notifications_icon.svg"></svg-icon>
 		</div>
-		<div class="settingsContainer margin-8 left">
-			<svg-icon src="/assets/settings_icon.svg" style="fill: #6CC6FE;"></svg-icon>
+		<div class="settingsContainer margin-8 left" (click)="showSettingsTab = !showSettingsTab">
+			<svg-icon src="/assets/settings_icon.svg"></svg-icon>
+			<app-dialog [showSettingsMenu]="showSettingsTab">
+			    <div style="display:grid;">
+					<div class="userProfileMenu left">
+						<div class="userPic"></div>
+						<div class="userTitles">
+							<div class="userTitle">CDP Operator</div>
+						    <div class="userRole">Operator</div>
+						</div>
+					</div>
+					<div class="settingsLink profileLink left">
+						<i class="fa fa-cog settingsMenuIcons"></i>
+						<div class="settingsMenuItem" (click)="settingsTabSelected($event)">Settings</div>
+					</div>
+					<div class="advancedConfigurationLink profileLink left">
+					    <i class="fa fa-file-text-o settingsMenuIcons"></i>
+					    <div class="settingsMenuItem">Advanced</div>
+					</div>
+					<div class="signOut profileLink left">
+					    <i class="fa fa-sign-out settingsMenuIcons"></i>
+					    <div class="settingsMenuItem">Sign Out</div>
+					</div>
+				</div>
+			</app-dialog>
 		</div>
 		<div class="helpDoc margin-8 left">
-			<svg-icon src="/assets/help_icon_circle_filled.svg" style="fill: #6CC6FE;"></svg-icon>
+			<svg-icon src="/assets/help_icon_circle_filled.svg"></svg-icon>
 		</div>
 		<div class="toolbarAppLogo margin-8 left">
 			
@@ -47,3 +70,9 @@
 	
 </div>
 <div id="mapid"></div>
+<!-- <div *ngIf="showSettingsPage">
+  <app-settings-page></app-settings-page>
+</div>
+<div *ngIf="showMapView">
+  <div id="mapid"></div>
+</div> -->

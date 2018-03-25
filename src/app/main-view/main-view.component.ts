@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalDialogComponent } from '../modal-dialog/modal-dialog.component';
+
 declare var L: any;
 @Component({
   selector: 'app-main-view',
@@ -6,8 +8,13 @@ declare var L: any;
   styleUrls: ['./main-view.component.css']
 })
 export class MainViewComponent implements OnInit {
-
-  constructor() { }
+  showSettingsTab:boolean;
+  //showSettingsPage:boolean;
+  showSettingsPage=false;
+  showMapView:boolean;
+  constructor() { 
+    this.showMapView=true;
+  }
 
   ngOnInit() {
     var mymap = L.map('mapid').setView([51.505, -0.09], 13);
@@ -18,5 +25,12 @@ export class MainViewComponent implements OnInit {
 	    accessToken: 'pk.eyJ1IjoidGltdHVpdHkiLCJhIjoicm5rOHVFSSJ9.9Zl65ucEq3ClmtRo1hHGRw'
    }).addTo(mymap);
   }
-
+  settingsTabSelected(e){
+    this.showSettingsPage=true;
+    this.showMapView=false;
+  }
+  mapViewTabSelected(e){
+    this.showMapView=true;
+    this.showSettingsPage=false;
+  }
 }

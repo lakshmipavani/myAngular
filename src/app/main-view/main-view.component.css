@@ -145,3 +145,64 @@ a{
     height: 700px;
     background: black;
 }
+
+.userProfileMenu{
+    background-color: #1a2832;
+    margin-left: 5px;
+    margin-bottom: 16px;
+}
+.userPic{
+    float:left;
+    display: inline-block;
+    background-repeat: no-repeat;
+    border: 2px solid #FFF;
+    border-radius: 30px;
+    background-image: url(/assets/cim_user_pick.png);
+    padding: 17px !important;
+    background-size: contain;
+    margin-top: -6px;
+    margin-left: -10px;
+    margin-right: 10px;
+}
+.userTitles{
+    max-width: 139px;
+    overflow: hidden;
+    height: 46px;
+    margin-left: 10px;
+    letter-spacing: 0.5px;
+    margin-top: -6px;
+}
+.userTitle{
+  color: #FFF;
+  font-family: "CiscoSansTTLight";
+  text-transform: capitalize;
+  font-size: 16px;
+  width: 96px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-top: 6px;
+}
+.userRole{
+  font-size: 13px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 96px;
+}
+.profileLink{
+  padding: 9px 0px 9px 6px;
+  cursor: pointer;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display:inline-block;
+}
+.settingsMenuIcons{
+  font-size: 19px;
+  float:left;
+}
+.settingsMenuItem{
+  float: left;
+  font-size: 17px;
+  padding-left: 14px;
+  cursor:pointer;
+}    
