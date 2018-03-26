@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 
 
@@ -29,6 +31,7 @@ import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MainViewComponent } from './main-view/main-view.component';
+import { SettingsPageComponent } from './settings-page/settings-page.component';
 
 
 
@@ -47,12 +50,15 @@ import { MainViewComponent } from './main-view/main-view.component';
     ModalDialogComponent,
     LoginComponent,
     RegisterComponent,
-    MainViewComponent
+    MainViewComponent,
+    SettingsPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    AngularSvgIconModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBlOmZdUxm037dt6VmBtVbkSHA4pilIlUE'
     })

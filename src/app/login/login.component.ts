@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
      if(username== 'pavani' && password == 'pavani'){
         console.log('success');
         this.userService.setUserLoggedIn();
-        this.router.navigate(['/navBar']);
+        this.router.navigate(['/mainView']);
      }else{
         console.log('error');
      }

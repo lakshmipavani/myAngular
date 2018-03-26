@@ -75,10 +75,10 @@ input:focus {
     color: white;
     background-image: url(../../assets/cisco_logo.png);
     background-repeat: no-repeat;
-    height: 50px;
+    height: 45px;
     margin-left: 10%;
     background-size: 17% 60%;
-    background-position: 40% 0%;
+    background-position: 40% 40%;
     }
     .loginFields{
     padding: 10px 38px;

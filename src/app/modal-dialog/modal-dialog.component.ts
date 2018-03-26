@@ -21,7 +21,9 @@ import {
 export class ModalDialogComponent implements OnInit {
   @Input() closable = true;
   @Input() visible: boolean;
+  @Input() showSettingsMenu:boolean;
   @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+   @Output() settingsMenuChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -30,6 +32,8 @@ export class ModalDialogComponent implements OnInit {
   close() {
     this.visible = false;
     this.visibleChange.emit(this.visible);
+    this.showSettingsMenu = false;
+    this.settingsMenuChange.emit(this.showSettingsMenu);
   }
 
 }

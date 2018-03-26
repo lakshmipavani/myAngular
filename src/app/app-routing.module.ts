@@ -3,7 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
+
+import { MainViewComponent } from './main-view/main-view.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { MapViewComponent } from './map-view/map-view.component';
 import { GoggleviewComponent } from './goggleview/goggleview.component';
 import { AppInfoWindowComponent } from './goggleview/goggleview.component';
@@ -18,7 +21,7 @@ import { AuthGuard } from './auth.guard';
   // Route config let's you map routes to components
   const routes: Routes = [
       {
-        path:'',component:LoginComponent
+        path:'login',component:LoginComponent
       },
       {
         path:'newCustomerRegistration',component:RegisterComponent
@@ -32,6 +35,9 @@ import { AuthGuard } from './auth.guard';
       },
       {
             path:'dashboard',canActivate:[AuthGuard],component:DashboardComponent
+      },
+      {
+            path:'',component:MainViewComponent
       },
       {
             path:'mapsView',canActivate:[AuthGuard],component:MapViewComponent
