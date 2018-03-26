@@ -52,10 +52,11 @@
     margin-right: auto;
     margin-left: 74%;
     height: 20%;
-    min-height: 20%;
+    //min-height: 20%;
+    height: min-content;
     width: fit-content;
     margin-bottom: auto;
-    height: 10%;
+    //height: 10%;
     bottom: 0;
     background-color: #1a2832;
     padding: 12px;
