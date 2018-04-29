@@ -1,0 +1,19 @@
+{
+  "HOME": {
+    "TITLE": "Bonjour Angular 2 avec ng2-translate !",
+    "SELECT": "Changer la langue"
+  },
+  "sample testing":"sample testing in french",
+  "sampletest works!":"sampletest works in french!",
+  "sample testing":"sample testing in french",
+  "sampletest works!":"sampletest works in french!",
+  "Dashboard":"Dashboard in french",
+  "Map view": "Map view in french",
+  "Reports":"Reports in french",
+  "Events":"Events in french",
+  "Policies":"Policies in french",
+  "Users":"Users in french",
+  "Regions":"Regions in french",
+  "Sop":"Sop in french",
+  "Module Layers":"Module Layers in french"
+}

@@ -1,0 +1,17 @@
+{
+  "HOME": {
+    "TITLE": "Hello Angular 2 with ng2-translate!",
+    "SELECT": "Change language"
+  },
+  "sample testing":"sample testing",
+  "sampletest works!":"sampletest works!",
+  "Dashboard":"Dashboard",
+  "Map view": "Map view",
+  "Reports":"Reports",
+  "Events":"Events",
+  "Policies":"Policies",
+  "Users":"Users",
+  "Regions":"Regions",
+  "Sop":"Sop",
+  "Module Layers":"Module Layers"
+}

@@ -5,6 +5,8 @@ import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 
+import {TranslateModule} from "ng2-translate";
+
 
 
 import { AppComponent } from './app.component';
@@ -34,7 +36,6 @@ import { MainViewComponent } from './main-view/main-view.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +60,7 @@ import { SettingsPageComponent } from './settings-page/settings-page.component';
     BrowserAnimationsModule,
     HttpClientModule,
     AngularSvgIconModule,
+    TranslateModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBlOmZdUxm037dt6VmBtVbkSHA4pilIlUE'
     })

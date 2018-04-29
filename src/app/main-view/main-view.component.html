@@ -14,8 +14,14 @@
 	</div>
 	<div class="toolbarRightSectionContainer">
 		<div class="languagePicker margin-8 left">
-		  <div class="languageIcon"></div>
-		  <div class="languageText">Eng</div>
+		  <div class="languageIcon">
+			    <label>
+			        <select #langSelect (change)="translate.use(langSelect.value)">
+			          <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+			        </select>
+			    </label>
+		  </div>
+		  <!-- <div class="languageText">Eng</div>-->
 		  <div class="languageInputIcon"></div>
 		</div>
 		<div class="notificationContainer margin-8 left">
@@ -57,18 +63,19 @@
 </div>
 <div class="toolbarMenuSectionContainer">
 	<ul class="toolbar-menu-section">
-		<li class="toolbar-menu-item active">Dashboard</li>
-		<li class="toolbar-menu-item">Map view</li>
-		<li class="toolbar-menu-item">Reports</li>
-		<li class="toolbar-menu-item">Events</li>
-		<li class="toolbar-menu-item">Policies</li>
-		<li class="toolbar-menu-item">Users</li>
-		<li class="toolbar-menu-item">Regions</li>
-		<li class="toolbar-menu-item">Sop</li>
+		<li class="toolbar-menu-item active" translate>Dashboard</li>
+		<li class="toolbar-menu-item" translate>Map view</li>
+		<li class="toolbar-menu-item" translate>Reports</li>
+		<li class="toolbar-menu-item" translate>Events</li>
+		<li class="toolbar-menu-item" translate>Policies</li>
+		<li class="toolbar-menu-item" translate>Users</li>
+		<li class="toolbar-menu-item" translate>Regions</li>
+		<li class="toolbar-menu-item" translate>Sop</li>
 	</ul>
 </div>
 	
 </div>
+<div class="subtoolbar" translate>Module Layers</div>
 <div id="mapid"></div>
 <!-- <div *ngIf="showSettingsPage">
   <app-settings-page></app-settings-page>
